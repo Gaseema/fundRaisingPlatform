@@ -1,0 +1,17 @@
+extends layout
+block content
+    div(class="row")
+        div(class="col s6")
+            h1 Add local account
+            if (message.length > 0)
+                div(class="alert alert-danger") #{message}
+            // LOGIN FORM
+            form(action='/connect/local', method='post')
+              .form-group
+                input.form-control(type='text', name='email')
+              .form-group
+                input.form-control(type='password', name='password')
+              button.btn.btn-warning.btn-lg(type='submit') Add Local
+            hr
+            p
+              a(href='/profile') Go back to profile
