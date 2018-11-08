@@ -1,0 +1,203 @@
+doctype html
+html(lang='en')
+  head
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(content='width=device-width, initial-scale=1, shrink-to-fit=no', name='viewport')
+    title FundRaise
+    // Bootstrap CSS
+    link(href='/stylesheets/bootstrap.min.css', rel='stylesheet', type='text/css')
+    // Icon
+    link(href='/fonts/line-icons.css', rel='stylesheet', type='text/css')
+    // Slicknav
+    link(href='/stylesheets/slicknav.css', rel='stylesheet', type='text/css')
+    // Owl carousel
+    link(href='/stylesheets/owl.carousel.min.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/owl.theme.css', rel='stylesheet', type='text/css')
+    // Slick Slider
+    link(href='/stylesheets/slick.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/slick-theme.css', rel='stylesheet', type='text/css')
+    // Animate
+    link(href='/stylesheets/animate.css', rel='stylesheet', type='text/css')
+    // Main Style
+    link(href='/stylesheets/main.css', rel='stylesheet', type='text/css')
+    // Responsive Style
+    link(href='/stylesheets/responsive.css', rel='stylesheet', type='text/css')
+  body
+    // Header Area wrapper Starts
+    header#header-wrap
+        // Navbar Start
+        nav.navbar.navbar-expand-lg.fixed-top.scrolling-navbar.indigo
+            .container
+              // Brand and toggle get grouped for better mobile display
+              .navbar-header
+                button.navbar-toggler(aria-controls='main-navbar', aria-expanded='false', aria-label='Toggle navigation', data-target='#main-navbar', data-toggle='collapse', type='button')
+                  span.navbar-toggler-icon
+                  span.icon-menu
+                  span.icon-menu
+                  span.icon-menu
+                a.navbar-brand(href='index.html')
+                  p(style="font-size: 1.2em; font-weight: bold;") FundRaise
+              #main-navbar.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto.w-100.justify-content-left.clearfix
+                  li.nav-item.active
+                    a.nav-link(href='#hero-area') Home
+                  li.nav-item
+                    a.nav-link(href='#services') Services
+                  li.nav-item
+                    a.nav-link(href='#feature') feature
+                  li.nav-item
+                    a.nav-link(href='#team') Team
+                  li.nav-item
+                    a.nav-link(href='#testimonial') Testimonial
+                  li.nav-item
+                    a.nav-link(href='#pricing') Pricing
+                  li.nav-item
+                    a.nav-link(href='#contact') Contact
+                .btn-sing.float-right
+                  a.btn.btn-border(href='#feature') FAQ
+        // Mobile Menu Start
+        ul.mobile-menu.navbar-nav
+          li
+            a.page-scroll(href='#hero-area') Home
+          li
+            a.page-scroll(href='#services') Services
+          li
+            a.page-scroll(href='#feature') feature
+          li
+            a.page-scroll(href='#team') Team
+          li
+            a.page-scroll(href='#testimonial') Testimonial
+          li
+            a.page-scroll(href='#pricing') Pricing
+          li
+            a.page-scroll(href='#contact') Contact
+        // Mobile Menu End
+        // Navbar End
+    // Hero Area Start
+    #hero-area.hero-area-bg
+      div(style="background:red;height:100vh;width:100vw;")
+    // Contact Section Start
+    section#contact.section-padding
+      .container
+        .row
+          .col-12
+            .section-header.text-center
+              h2.section-title.wow.fadeInDown(data-wow-delay='0.3s') Contact
+        .row.contact-form-area.wow.fadeInUp(data-wow-delay='0.4s')
+          .col-md-6.col-lg-6.col-sm-12
+            .contact-block
+              h2 Contact Form
+              form#contactForm(name='contactForm')
+                .row
+                  .col-md-6
+                    .form-group
+                      input#name.form-control(data-error='Please enter your name', name='name', placeholder='Name', required='', type='text')
+                      .help-block.with-errors
+                  .col-md-6
+                    .form-group
+                      input#email.form-control(data-error='Please enter your email', name='email', placeholder='Email', required='', type='text')
+                      .help-block.with-errors
+                  .col-md-12
+                    .form-group
+                      input#msg_subject.form-control(data-error='Please enter your subject', placeholder='Subject', required='', type='text')
+                      .help-block.with-errors
+                  .col-md-12
+                    .form-group
+                      textarea#message.form-control(data-error='Write your message', placeholder='Your Message', required='', rows='5')
+                      .help-block.with-errors
+                    .submit-button
+                      button#form-submit.btn.btn-common(type='submit') Send Message
+                      #msgSubmit.h3.text-center.hidden
+                      .clearfix
+          .col-md-6.col-lg-6.col-sm-12
+            .contact-right-area.wow.fadeIn
+              h2 Get In Touch
+              .contact-right
+                .single-contact
+                  .contact-icon
+                    i.lni-map-marker
+                  p Skopje, Macedonia
+                .single-contact
+                  .contact-icon
+                    i.lni-envelope
+                  p
+                    a(href='#') email@gmail.com
+                  p
+                    a(href='#') tomsaulnier@gmail.com
+                .single-contact
+                  .contact-icon
+                    i.lni-phone-handset
+                  p
+                    a(href='#') +42 374 5967
+                  p
+                    a(href='#') +99 123 5967
+    // Contact Section End
+    // Footer Section Start
+    footer#footer.footer-area.section-padding
+      .container
+        .container
+          .row
+            .col-lg-3.col-md-6.col-sm-12.col-xs-12.wow.fadeInUp(data-wow-delay='0.2s')
+              .footer-logo.mb-3
+                p(style="font-size: 1.2em; font-weight: bold;") FundRaise
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam excepturi quasi, ipsam voluptatem.
+            .col-lg-3.col-md-6.col-sm-12.col-xs-12.wow.fadeInUp(data-wow-delay='0.4s')
+              h3.footer-titel Company
+              ul
+                li
+                  a(href='#') Press Releases
+                li
+                  a(href='#') Mission
+                li
+                  a(href='#') Strategy
+            .col-lg-3.col-md-6.col-sm-12.col-xs-12.wow.fadeInUp(data-wow-delay='0.6s')
+              h3.footer-titel About
+              ul
+                li
+                  a(href='#') Career
+                li
+                  a(href='#') Team
+                li
+                  a(href='#') Clients
+            .col-lg-3.col-md-6.col-sm-12.col-xs-12.wow.fadeInUp(data-wow-delay='0.8s')
+              h3.footer-titel Find us on
+              .social-icon
+                a.facebook(href='#')
+                  i.lni-facebook-filled
+                a.twitter(href='#')
+                  i.lni-twitter-filled
+                a.instagram(href='#')
+                  i.lni-instagram-filled
+                a.linkedin(href='#')
+                  i.lni-linkedin-filled
+    // Footer Section End
+    section#copyright
+      .container
+        .row
+          .col-md-12
+            p Copyright © 2018 UIdeck All Right Reserved
+    // Go to Top Link
+    a.back-to-top(href='#')
+      i.lni-arrow-up
+    // Preloader
+    #preloader
+      #loader-1.loader
+    // End Preloader
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='/javascript/jquery-min.js')
+    script(src='/javascript/popper.min.js')
+    script(src='/javascript/bootstrap.min.js')
+    script(src='/javascript/owl.carousel.min.js')
+    script(src='/javascript/slick.min.js')
+    script(src='/javascript/wow.js')
+    script(src='/javascript/jquery.nav.js')
+    script(src='/javascript/scrolling-nav.js')
+    script(src='/javascript/jquery.easing.min.js')
+    script(src='/javascript/jquery.slicknav.js')
+    script(src='/javascript/main.js')
+    script(src='/javascript/form-validator.min.js')
+    script(src='/javascript/contact-form-script.min.js')
+    script(src='/javascript/map.js')
+    script(src='//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM', type='text/javascript')
