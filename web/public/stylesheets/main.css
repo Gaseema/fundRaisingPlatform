@@ -681,7 +681,10 @@ hr {
   color: #fff;
   overflow: hidden;
   position: relative;
-  background: #f8f9fb;
+  background: -webkit-linear-gradient(230deg, #f8f8f8 0%, #939393 100%);
+  background: linear-gradient(187deg, #f8f8f8 0%, #939393 100%);
+  height: 100vh;
+  width: 100vw;
 }
 
 #hero-area .contents {
