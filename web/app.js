@@ -70,7 +70,6 @@ app.get('/', function(req, res) {
     res.json('index');
 });
 app.get('/login', function(req, res) {
-
     // render the page and pass in any flash data if it exists
     res.render('login', {
         message: req.flash('loginMessage')
@@ -176,7 +175,7 @@ function isLoggedIn(req, res, next) {
     if (req.isAuthenticated())
         return next();
     // if they aren't redirect them to the home page
-    res.redirect('/');
+    res.redirect('/login');
 }
 
 // process the signup form
@@ -192,6 +191,13 @@ app.post('/login', passport.authenticate('local-login', {
     failureRedirect: '/login', // redirect back to the signup page if there is an error
     failureFlash: true // allow flash messages
 }));
+
+// Business Profile signupMessage
+app.get('/businessprofile', isLoggedIn, (req, res) => {
+    res.render('businessProfile', {
+        title: 'Business Profile'
+    });
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

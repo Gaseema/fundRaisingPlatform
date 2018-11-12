@@ -1,26 +1,45 @@
 extends layout
 block content
-    .row
-        h1
-          span
-          |  Login
-        // show any messages that come back with authentication
-        if message
-            .alert.alert-danger #{message}
-        // LOGIN FORM
-        form(action='/login', method='post')
-          .form-group
-            label Email
-            input.form-control(type='text', name='email')
-          .form-group
-            label Password
-            input.form-control(type='password', name='password')
-          button.btn.btn-warning.btn-lg(type='submit') Login
-        hr
-        p
-          | Need an account? 
-          a(href='/signup') Signup
-        p
-          | Or go 
-          a(href='/') home
-          | .
+    .row.standardWidth
+        .row(style='width: 80%; -webkit-box-shadow: -1px 0px 44px -13px rgba(0,0,0,0.75); -moz-box-shadow: -1px 0px 44px -13px rgba(0,0,0,0.75); box-shadow: -1px 0px 44px -13px rgba(0,0,0,0.75); border: solid #d4d4d4 1px; border-radius: 5px; margin-top: 10%; margin-left: auto; margin-right: auto;')
+            .col-sm-4(style="background: url(./img/x0.jpg); background-size: cover; position: relative;")
+                div(style='position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center;')
+                    h5(style='font-weight: bold; font-size: 2.3em; color: white;') FundRaise
+                    p(style='color:white;') Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            .col-sm-8(style='padding: 30px;')
+                // show any messages that come back with authentication
+                if message
+                    p(style='color: red; font-size: 1.3em') #{message}
+                // LOGIN FORM
+                form(action='/login', method='post')
+                    .form-group
+                      label Email
+                      input.form-control(type='text', name='email')
+                    .form-group
+                      label Password
+                      input.form-control(type='password', name='password')
+                    button.btn.btn-warning.btn-lg(type='submit') Login
+                div(style='padding-top: 20px;')
+                    p(style='float: left; line-height: 40px;') Or login with :
+                    ul.inlineBlock
+                        li
+                            a(href='/auth/facebook')
+                                svg#Capa_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 112.196 112.196', style='enable-background:new 0 0 112.196 112.196; width: 40px;', xml:space='preserve')
+                                    circle(style='fill:#3B5998;', cx='56.098', cy='56.098', r='56.098')
+                                    path(style='fill:#FFFFFF;', d='M70.201,58.294h-10.01v36.672H45.025V58.294h-7.213V45.406h7.213v-8.34   c0-5.964,2.833-15.303,15.301-15.303L71.56,21.81v12.51h-8.151c-1.337,0-3.217,0.668-3.217,3.513v7.585h11.334L70.201,58.294z')
+                        li
+                            a(href='/auth/google')
+                                svg#Layer_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 291.32 291.32', style='enable-background:new 0 0 291.32 291.32; width: 40px;', xml:space='preserve')
+                                      path(style='fill:#DD4B39;', d='M145.66,0c80.113,0,145.66,65.547,145.66,145.66s-65.547,145.66-145.66,145.66S0,225.772,0,145.66   S65.547,0,145.66,0z')
+                                      polygon(style='fill:#FFFFFF;', points='219.4,121.079 219.4,137.466 235.786,137.466 235.786,153.853 219.4,153.853 219.4,170.24     203.013,170.24 203.013,153.853 186.626,153.853 186.626,137.466 203.013,137.466 203.013,121.079   ')
+                                      path(style='fill:#FFFFFF;', d='M71.919,186.626c-21.849-21.849-21.849-60.085,0.91-81.933    c16.387-16.387,40.056-20.028,60.995-11.835l8.193,4.552l9.104,6.373l-14.566,14.566l-5.462-3.641    c-12.745-8.193-30.953-6.373-42.787,5.462c-13.656,13.656-14.566,38.236,0,52.802c13.656,14.566,38.236,14.566,50.981,0    c3.641-3.641,7.283-9.104,8.193-14.566v-1.821h-32.773v-18.207h51.891l0.91,4.552v12.745c-0.91,11.835-5.462,23.67-13.656,31.863    C132.004,208.475,93.768,208.475,71.919,186.626z')
+    .row.standardWidth
+        .col-sm(style='text-align: center; padding-top: 20px;')
+            p
+                | Need an account?
+                a(href='/signup')  Signup
+                span
+                  span(style="padding: 0px 15px;") |
+                  | Or go
+                  a(href='/')  home
+                  | .

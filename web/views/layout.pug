@@ -1,10 +1,41 @@
 doctype html
-html
+html(lang='en')
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js')
-
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(content='width=device-width, initial-scale=1, shrink-to-fit=no', name='viewport')
+    title FundRaise
+    // Bootstrap CSS
+    link(href='/stylesheets/bootstrap.min.css', rel='stylesheet', type='text/css')
+    // Icon
+    link(href='/fonts/line-icons.css', rel='stylesheet', type='text/css')
+    // Slicknav
+    link(href='/stylesheets/slicknav.css', rel='stylesheet', type='text/css')
+    // Owl carousel
+    link(href='/stylesheets/owl.carousel.min.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/owl.theme.css', rel='stylesheet', type='text/css')
+    // Slick Slider
+    link(href='/stylesheets/slick.css', rel='stylesheet', type='text/css')
+    link(href='/stylesheets/slick-theme.css', rel='stylesheet', type='text/css')
+    // Animate
+    link(href='/stylesheets/animate.css', rel='stylesheet', type='text/css')
+    // Main Style
+    link(href='/stylesheets/main.css', rel='stylesheet', type='text/css')
+    // Responsive Style
+    link(href='/stylesheets/responsive.css', rel='stylesheet', type='text/css')
   body
     block content
+    script(src='/javascript/jquery-min.js')
+    script(src='/javascript/popper.min.js')
+    script(src='/javascript/bootstrap.min.js')
+    script(src='/javascript/owl.carousel.min.js')
+    script(src='/javascript/slick.min.js')
+    script(src='/javascript/wow.js')
+    script(src='/javascript/jquery.nav.js')
+    script(src='/javascript/scrolling-nav.js')
+    script(src='/javascript/jquery.easing.min.js')
+    script(src='/javascript/jquery.slicknav.js')
+    script(src='/javascript/main.js')
+    script(src='/javascript/form-validator.min.js')
+    script(src='/javascript/contact-form-script.min.js')
+    script(src='//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM', type='text/javascript')
