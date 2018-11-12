@@ -193,8 +193,15 @@ app.post('/login', passport.authenticate('local-login', {
 }));
 
 // Business Profile signupMessage
-app.get('/businessprofile', isLoggedIn, (req, res) => {
+app.get('/businessprofile', (req, res) => {
     res.render('businessProfile', {
+        title: 'Business Profile'
+    });
+});
+
+// ICO Listing Page
+app.get('/icos', (req, res) => {
+    res.render('icoListing', {
         title: 'Business Profile'
     });
 });

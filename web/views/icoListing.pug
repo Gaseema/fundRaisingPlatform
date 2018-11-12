@@ -1,0 +1,216 @@
+doctype html
+html(lang='en')
+  head
+      title FundRaise
+      // Bootstrap CSS
+      link(href='/stylesheets/bootstrap.min.css', rel='stylesheet', type='text/css')
+      // Main Style
+      link(href='/stylesheets/main.css', rel='stylesheet', type='text/css')
+      // Icon
+      link(href='/fonts/line-icons.css', rel='stylesheet', type='text/css')
+  body
+    section.customeNav
+        ul
+          li
+            a(href='#home' style="font-size: 2em; font-weight: bold; color: rgb(0, 57, 112);") FundRaise
+          li
+            a(href='#news') ICOs
+    section.icosListSettings
+        .row(style='width: 80%; margin: 20px auto 50px auto;')
+            .col-sm(style='background: white; padding: 20px; border-radius: 3px;margin-right: 5px;')
+                button.btn.btn-secondary(type='button' style='background: #004486; margin-bottom: 10px;') Secondary
+                p Do not miss investment opportunities. Be alerted via email a day before listed security token offerings are opened for investing.
+            .col-sm(style='background: white; padding: 20px; border-radius: 3px;margin-left: 6px;')
+                h5 List Your ICO
+                p ICO listings are fact based. We do not promote or advertise investment deals unless explicitly mentioned.
+        button.btn.btn-secondary(type='button' style='background: white; color: #12c312;') Ongoing
+        button.btn.btn-secondary(type='button' style='background: white; color: #313131;') Upcoming
+        button.btn.btn-secondary(type='button' style='background: white; color: #313131;') Past
+        button.btn.btn-secondary(type='button' style='background: white; color: #313131;') All
+        .row.icoSearchBar
+            form.search(style="position: relative;")
+                input.searchTerm(placeholder="Search for ICO ...")
+                input.searchButton(type="submit")
+                svg#Capa_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 250.313 250.313', style='enable-background:new 0 0 250.313 250.313; position: absolute; right: 0px; height: 40px; padding: 10px; width: 40px;', xml:space='preserve')
+                  g#Search
+                    path(style='fill-rule:evenodd;clip-rule:evenodd;', d='M244.186,214.604l-54.379-54.378c-0.289-0.289-0.628-0.491-0.93-0.76   c10.7-16.231,16.945-35.66,16.945-56.554C205.822,46.075,159.747,0,102.911,0S0,46.075,0,102.911   c0,56.835,46.074,102.911,102.91,102.911c20.895,0,40.323-6.245,56.554-16.945c0.269,0.301,0.47,0.64,0.759,0.929l54.38,54.38   c8.169,8.168,21.413,8.168,29.583,0C252.354,236.017,252.354,222.773,244.186,214.604z M102.911,170.146   c-37.134,0-67.236-30.102-67.236-67.235c0-37.134,30.103-67.236,67.236-67.236c37.132,0,67.235,30.103,67.235,67.236   C170.146,140.044,140.043,170.146,102.911,170.146z', fill='#FFFFFF')
+
+    section(style="background:#fafafa;padding:60px 0px;")
+        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
+          .col-sm-4
+              .row(style="height: 100%;")
+                .col-sm-3
+                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
+                .col-sm-9
+                  p.verticalAlign.borderRight(style='color: #646464; font-weight: bold;') Company X
+                  button.btn(style='position: absolute; right: 20px; background: #06ac06; padding: 4px; border-radius: 3px; font-size: 0.8em; top: 25px;') follow
+          .col-sm-6
+              .row(style="height: 100%;")
+                .col-sm
+                  div.verticalAlign One of three columns
+                .col-sm
+                  div.verticalAlign.borderRight One of three columns
+          .col-sm-2
+            div.verticalAlign(style="height: 100%;")
+                p(style='font-size: 0.8em;') Status: Ongoing
+                p(style='font-size: 0.8em;') Growth: 40%
+                p(style='font-size: 0.8em;') Community: 20,000
+        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
+          .col-sm-4
+              .row(style="height: 100%;")
+                .col-sm-3
+                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
+                .col-sm-9
+                  p.verticalAlign.borderRight Company X
+          .col-sm-6
+              .row(style="height: 100%;")
+                .col-sm
+                  div.verticalAlign One of three columns
+                .col-sm
+                  div.verticalAlign.borderRight One of three columns
+          .col-sm-2
+            div.verticalAlign(style="height: 100%;")
+                p Status
+                p Growth
+                p Community
+        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
+          .col-sm-4
+              .row(style="height: 100%;")
+                .col-sm-3
+                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
+                .col-sm-9
+                  p.verticalAlign.borderRight Company X
+          .col-sm-6
+              .row(style="height: 100%;")
+                .col-sm
+                  div.verticalAlign One of three columns
+                .col-sm
+                  div.verticalAlign.borderRight One of three columns
+          .col-sm-2
+            div.verticalAlign(style="height: 100%;")
+                p Status
+                p Growth
+                p Community
+        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
+          .col-sm-4
+              .row(style="height: 100%;")
+                .col-sm-3
+                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
+                .col-sm-9
+                  p.verticalAlign.borderRight Company X
+          .col-sm-6
+              .row(style="height: 100%;")
+                .col-sm
+                  div.verticalAlign One of three columns
+                .col-sm
+                  div.verticalAlign.borderRight One of three columns
+          .col-sm-2
+            div.verticalAlign(style="height: 100%;")
+                p Status
+                p Growth
+                p Community
+        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
+          .col-sm-4
+              .row(style="height: 100%;")
+                .col-sm-3
+                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
+                .col-sm-9
+                  p.verticalAlign.borderRight Company X
+          .col-sm-6
+              .row(style="height: 100%;")
+                .col-sm
+                  div.verticalAlign One of three columns
+                .col-sm
+                  div.verticalAlign.borderRight One of three columns
+          .col-sm-2
+            div.verticalAlign(style="height: 100%;")
+                p Status
+                p Growth
+                p Community
+        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
+          .col-sm-4
+              .row(style="height: 100%;")
+                .col-sm-3
+                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
+                .col-sm-9
+                  p.verticalAlign.borderRight Company X
+          .col-sm-6
+              .row(style="height: 100%;")
+                .col-sm
+                  div.verticalAlign One of three columns
+                .col-sm
+                  div.verticalAlign.borderRight One of three columns
+          .col-sm-2
+            div.verticalAlign(style="height: 100%;")
+                p Status
+                p Growth
+                p Community
+        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
+          .col-sm-4
+              .row(style="height: 100%;")
+                .col-sm-3
+                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
+                .col-sm-9
+                  p.verticalAlign.borderRight Company X
+          .col-sm-6
+              .row(style="height: 100%;")
+                .col-sm
+                  div.verticalAlign One of three columns
+                .col-sm
+                  div.verticalAlign.borderRight One of three columns
+          .col-sm-2
+            div.verticalAlign(style="height: 100%;")
+                p Status
+                p Growth
+                p Community
+    // Footer Section Start
+    footer#footer.footer-area.section-padding
+      .container
+        .container
+          .row
+            .col-lg-3.col-md-6.col-sm-12.col-xs-12
+              .footer-logo.mb-3
+                p(style="font-size: 1.2em; font-weight: bold;") FundRaise
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam excepturi quasi, ipsam voluptatem.
+            .col-lg-3.col-md-6.col-sm-12.col-xs-12
+              h3.footer-titel Company
+              ul
+                li
+                  a(href='#') Press Releases
+                li
+                  a(href='#') Mission
+                li
+                  a(href='#') Strategy
+            .col-lg-3.col-md-6.col-sm-12.col-xs-12
+              h3.footer-titel About
+              ul
+                li
+                  a(href='#') Career
+                li
+                  a(href='#') Team
+                li
+                  a(href='#') Clients
+            .col-lg-3.col-md-6.col-sm-12.col-xs-12
+              h3.footer-titel Find us on
+              .social-icon
+                a.facebook(href='#')
+                  i.lni-facebook-filled
+                a.twitter(href='#')
+                  i.lni-twitter-filled
+                a.instagram(href='#')
+                  i.lni-instagram-filled
+                a.linkedin(href='#')
+                  i.lni-linkedin-filled
+    // Footer Section End
+    section#copyright
+      .container
+        .row
+          .col-md-12
+            p Copyright © 2018 FundRaise All Right Reserved
+    // Go to Top Link
+    a.back-to-top(href='#')
+      i.lni-arrow-up
+    script(src='/javascript/jquery-min.js')
+    script(src='/javascript/bootstrap.min.js')
+    script(src='/javascript/main.js')
