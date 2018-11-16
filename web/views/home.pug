@@ -12,11 +12,17 @@ block content
                   span.icon-menu
                   span.icon-menu
                 a.navbar-brand(href='index.html')
-                  p(style="font-size: 1.2em; font-weight: bold; color: white;" id="companyLogo") FundRaise
+                  a(href='/' style="font-size: 1.2em; font-weight: bold; color: white;" id="companyLogo") FundRaise
               #main-navbar.collapse.navbar-collapse
                 ul.navbar-nav.mr-auto.w-100.justify-content-left.clearfix
                   li.nav-item.active
                     a.nav-link(href='#hero-area') Home
+                  li.nav-item
+                    a.nav-link(href='#features') Features
+                  li.nav-item
+                    a.nav-link(href='#walletApp') Wallet
+                  li.nav-item
+                    a.nav-link(href='/icos') ICOs
                   li.nav-item
                     a.nav-link(href='#contact') Contact
                 .btn-sing.float-right
@@ -35,6 +41,46 @@ block content
           h5(style='font-size: 3em; font-weight: bold;') FundRaise
           p An ICO information portal and advisory platform to create a professionally tailored solution to execute ICO's safely and securely, providing an end-to-end service for token creation, presale and public sale.
       img(src="/img/banner-curve.png" style="position: absolute; bottom: 0px; width: 100%;")
+
+    //About section
+    section.platformAbout#features
+        .row(style='margin:100px 0px;')
+            .col-sm
+                div.verticalAlign
+                    h5 NO MIDDLEMAN-
+                    h3 Truly Decentralized Fund Raising Platform
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fuga incidunt iste laudantium rem voluptatem. Ad animi deserunt dolorem est, excepturi illo, ipsa iste porro quasi, sit tempora vitae voluptate. consectetur adipisicing elit. Cupiditate fuga incidunt iste laudantium rem voluptatem. Ad animi deserunt dolorem est.
+            .col-sm
+                img(src='/img/art3.png')
+        .row(style='margin:100px 0px;')
+            .col-sm
+                img(src='/img/art4.png')
+            .col-sm
+                div.verticalAlign
+                    h5 INFINITE CHAINS NUMBER-
+                    h3 Scalable Infrastructure for the Token Economy
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fuga incidunt iste laudantium rem voluptatem. Ad animi deserunt dolorem est, excepturi illo, ipsa iste porro quasi, sit tempora vitae voluptate. consectetur adipisicing elit. Cupiditate fuga incidunt iste laudantium rem voluptatem. Ad animi deserunt dolorem est.
+
+
+    // Wallet App section
+    section.walletApp#walletApp
+        div(style='width: 80%; margin: 0px auto; padding: 80px 0px; padding-bottom: 0px;')
+            h4(style='text-align: center; color: white; padding-bottom: 30px;') Wallet App
+            p(style='text-align: center; width: 50%; margin-left: auto; margin-right: auto; padding-bottom: 30px;') Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fuga incidunt iste laudantium rem voluptatem. Ad animi deserunt dolorem est, excepturi illo
+            .row
+              .col-sm-6
+                div.verticalAlign
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fuga incidunt iste laudantium rem voluptatem. Ad animi deserunt dolorem est, excepturi illo
+                    ul(style='padding-left: 20px;')
+                        li Easy access to the Kryptix wallet
+                        li No extra fees
+                        li Effective news circulation
+                        li Easy deposit and withdrawl money
+                        li Secure trading and transaction
+              .col-sm-6
+                img(src='/img/app.png' style='width: 100%;')
+
+
     // Contact Section Start
     section#contact.section-padding
       .container
@@ -75,21 +121,21 @@ block content
                 .single-contact
                   .contact-icon
                     i.lni-map-marker
-                  p Skopje, Macedonia
+                  p Pinetree Plaza, Ngong Rd, Nairobi
                 .single-contact
                   .contact-icon
                     i.lni-envelope
                   p
                     a(href='#') email@gmail.com
                   p
-                    a(href='#') tomsaulnier@gmail.com
+                    a(href='#') example@gmail.com
                 .single-contact
                   .contact-icon
                     i.lni-phone-handset
                   p
-                    a(href='#') +42 374 5967
+                    a(href='#') +254 374 5967
                   p
-                    a(href='#') +99 123 5967
+                    a(href='#') +254 123 5967
     // Contact Section End
     // Footer Section Start
     footer#footer.footer-area.section-padding

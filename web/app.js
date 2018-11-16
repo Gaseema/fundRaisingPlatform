@@ -86,6 +86,11 @@ app.get('/profile', isLoggedIn, function(req, res) {
         user: req.user
     });
 });
+app.get('/profile/ico', isLoggedIn, function(req, res) {
+    res.render('manageICO', {
+        user: req.user
+    });
+});
 app.get('/logout', function(req, res) {
     req.logout();
     res.redirect('/');
@@ -202,6 +207,21 @@ app.get('/businessprofile', (req, res) => {
 // ICO Listing Page
 app.get('/icos', (req, res) => {
     res.render('icoListing', {
+        title: 'Business Profile'
+    });
+});
+app.get('/icos/upcoming', (req, res) => {
+    res.render('icoListing-upcoming', {
+        title: 'Business Profile'
+    });
+});
+app.get('/icos/past', (req, res) => {
+    res.render('icoListing-past', {
+        title: 'Business Profile'
+    });
+});
+app.get('/icos/all', (req, res) => {
+    res.render('icoListing-all', {
         title: 'Business Profile'
     });
 });

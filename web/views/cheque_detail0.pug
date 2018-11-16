@@ -1,0 +1,136 @@
+extends layout
+
+block content
+    script(src='/js/main.js')
+    div(style='background: #e6e6e6; height: -webkit-fill-available;')
+        a(href='/login')
+            svg#Layer_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 492 492', style='enable-background:new 0 0 492 492;width: 57px;/* height: 51px; */position: absolute;top: 30px;left: 30px;float: left;', xml:space='preserve')
+                path(d='M464.344,207.418l0.768,0.168H135.888l103.496-103.724c5.068-5.064,7.848-11.924,7.848-19.124    c0-7.2-2.78-14.012-7.848-19.088L223.28,49.538c-5.064-5.064-11.812-7.864-19.008-7.864c-7.2,0-13.952,2.78-19.016,7.844    L7.844,226.914C2.76,231.998-0.02,238.77,0,245.974c-0.02,7.244,2.76,14.02,7.844,19.096l177.412,177.412    c5.064,5.06,11.812,7.844,19.016,7.844c7.196,0,13.944-2.788,19.008-7.844l16.104-16.112c5.068-5.056,7.848-11.808,7.848-19.008    c0-7.196-2.78-13.592-7.848-18.652L134.72,284.406h329.992c14.828,0,27.288-12.78,27.288-27.6v-22.788    C492,219.198,479.172,207.418,464.344,207.418z', fill='#FFFFFF')
+        .row(style='text-align:center;height: 30vh;width:100%;background: linear-gradient(to right,#5C345F, #a54a69);')
+            svg#Capa_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 512 512', style='enable-background:new 0 0 512 512;width: 170px;margin-top: 100px;', xml:space='preserve')
+                path(style='fill: #1fc10e;', d='M437.019,74.98C388.667,26.629,324.38,0,256,0C187.619,0,123.332,26.629,74.979,74.98  C26.628,123.332,0,187.62,0,256s26.628,132.667,74.979,181.019C123.332,485.371,187.619,512,256,512  c68.38,0,132.667-26.629,181.019-74.981S512,324.38,512,256S485.371,123.333,437.019,74.98z')
+                path(style='fill: #26b120;', d='M437.019,74.98C388.667,26.629,324.38,0,256,0v512c68.38,0,132.667-26.629,181.019-74.981  S512,324.38,512,256S485.371,123.333,437.019,74.98z')
+                path(style='fill:#C7EFFF;', d='M224.634,342.532c-3.839,0-7.678-1.465-10.606-4.393l-80.333-80.333  c-5.858-5.857-5.858-15.355,0-21.213c5.857-5.857,15.355-5.857,21.213,0l69.727,69.727l132.458-132.46  c5.857-5.857,15.355-5.857,21.213,0s5.858,15.355,0,21.213L235.24,338.139C232.311,341.067,228.473,342.532,224.634,342.532z')
+                path(style='fill:#91E1FF;', d='M378.306,173.86c-5.857-5.857-15.355-5.857-21.213,0L256,274.953v42.426l122.306-122.306  C384.164,189.216,384.164,179.718,378.306,173.86z')
+            p(style='color: white;font-size: 3em;font-size: bold;') VERIFIED   SUCCESSFULLY!
+
+            // Trigger/Open The Modal
+            button#myBtn
+                svg#Capa_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 437.6 437.6', style='enable-background:new 0 0 437.6 437.6;width: 60px;position: absolute;right: 60px;top: 35px;', xml:space='preserve')
+                    path(d='M194,142.8c0.8,1.6,1.6,3.2,2.4,4.4c0.8,1.2,2,2.4,2.8,3.6c1.2,1.2,2.4,2.4,4,3.6c1.2,0.8,2.8,2,4.8,2.4     c1.6,0.8,3.2,1.2,5.2,1.6c2,0.4,3.6,0.4,5.2,0.4c1.6,0,3.6,0,5.2-0.4c1.6-0.4,3.2-0.8,4.4-1.6h0.4c1.6-0.8,3.2-1.6,4.8-2.8     c1.2-0.8,2.4-2,3.6-3.2l0.4-0.4c1.2-1.2,2-2.4,2.8-3.6s1.6-2.4,2-4c0-0.4,0-0.4,0.4-0.8c0.8-1.6,1.2-3.6,1.6-5.2     c0.4-1.6,0.4-3.6,0.4-5.2s0-3.6-0.4-5.2c-0.4-1.6-0.8-3.2-1.6-5.2c-1.2-2.8-2.8-5.2-4.8-7.2c-0.4-0.4-0.4-0.4-0.8-0.8     c-1.2-1.2-2.4-2-4-3.2c-1.6-0.8-2.8-1.6-4.4-2.4c-1.6-0.8-3.2-1.2-4.8-1.6c-2-0.4-3.6-0.4-5.2-0.4c-1.6,0-3.6,0-5.2,0.4     c-1.6,0.4-3.2,0.8-4.8,1.6H208c-1.6,0.8-3.2,1.6-4.4,2.4c-1.6,1.2-2.8,2-4,3.2c-1.2,1.2-2.4,2.4-3.2,3.6     c-0.8,1.2-1.6,2.8-2.4,4.4c-0.8,1.6-1.2,3.2-1.6,4.8c-0.4,2-0.4,3.6-0.4,5.2c0,1.6,0,3.6,0.4,5.2     C192.8,139.6,193.6,141.2,194,142.8z', fill='#FFFFFF')
+                    path(d='M249.6,289.2h-9.2v-98c0-5.6-4.4-10.4-10.4-10.4h-42c-5.6,0-10.4,4.4-10.4,10.4v21.6c0,5.6,4.4,10.4,10.4,10.4h8.4v66.4     H188c-5.6,0-10.4,4.4-10.4,10.4v21.6c0,5.6,4.4,10.4,10.4,10.4h61.6c5.6,0,10.4-4.4,10.4-10.4V300     C260,294,255.2,289.2,249.6,289.2z', fill='#FFFFFF')
+                    path(d='M218.8,0C98,0,0,98,0,218.8s98,218.8,218.8,218.8s218.8-98,218.8-218.8S339.6,0,218.8,0z M218.8,408.8     c-104.8,0-190-85.2-190-190s85.2-190,190-190s190,85.2,190,190S323.6,408.8,218.8,408.8z', fill='#FFFFFF')
+        .row(style='background: white;width: 90%;border-radius: 3px;font-size: 3em;')
+            p(style=' margin: 0px; border-bottom: solid #cecece 1px; padding: 12px; font-weight: bold; color: #545454;') Cheque Details
+            form.col.s12
+              .row(style='margin: 35px 0px;')
+                .input-field.col.s12
+                  input#first_name1.validate(value='Inter Intel', type='text', style='\
+                  font-size: 1em;\
+                  ')
+                  label(for='first_name1', style='font-size: 0.8em;margin-top: -55px;') Drawer
+              .row(style='margin: 30px 0px;')
+                .input-field.col.s12
+                  input#first_name2.validate(value='321324134134', type='text', style='\
+                  font-size: 1em;\
+                  ')
+                  label(for='first_name2', style='font-size: 0.8em;margin-top: -50px;') Cheque Number
+              .row(style='margin: 30px 0px;')
+                .input-field.col.s12
+                  input#first_name2.validate(value='Bankers Cheque', type='text', style='\
+                  font-size: 1em;\
+                  ')
+                  label(for='first_name2', style='font-size: 0.8em;margin-top: -50px;') Cheque Type
+              .row(style='margin: 30px 0px;')
+                .input-field.col.s12
+                  input#first_name2.validate(value='048', type='text', style='\
+                  font-size: 1em;\
+                  ')
+                  label(for='first_name2', style='font-size: 0.8em;margin-top: -50px;') Bank Branch
+              .row(style='margin: 0;margin: 30px 0px;')
+                .input-field.col.s12
+                  input#first_name3.validate(placeholder='.', type='text', style='\
+                  font-size: 1em;\
+                  ')
+                  label(for='first_name3', style='font-size: 0.8em;margin-top: -55px;') Payee
+              .row(style='margin: 0;margin: 30px 0px;')
+                .input-field.col.s12
+                  input#first_name3.validate(placeholder='.', type='text', style='\
+                  font-size: 1em;\
+                  ')
+                  label(for='first_name3', style='font-size: 0.8em;margin-top: -55px;') Amount
+              .row(style=' margin: 0;')
+                .input-field.col.s12
+                  input#first_name4.validate(placeholder='.', type='text', style='\
+                  font-size: 1em;\
+                  ')
+                  label(for='first_name4', style='font-size: 0.8em;margin-top: -55px;') Date
+              button.btn(style='display: block;margin-left: auto;margin-right: auto;margin-bottom: 20px;width: 200px;font-size: 1em;height: 100px;') save
+
+            // The Modal
+            #myModal.modal2
+              // Modal content
+
+              .modal-content
+                svg(xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox='-38 0 511 511.99956', style='width: 250px;border-radius: 50%;padding: 10px;display: block;margin-left: auto;margin-right: auto; margin-top: -130px;')
+                    g#surface1
+                      path(d='M 413.476562 341.910156 C 399.714844 379.207031 378.902344 411.636719 351.609375 438.289062 C 320.542969 468.625 279.863281 492.730469 230.699219 509.925781 C 229.085938 510.488281 227.402344 510.949219 225.710938 511.289062 C 223.476562 511.730469 221.203125 511.96875 218.949219 512 L 218.507812 512 C 216.105469 512 213.691406 511.757812 211.296875 511.289062 C 209.605469 510.949219 207.945312 510.488281 206.339844 509.9375 C 157.117188 492.769531 116.386719 468.675781 85.289062 438.339844 C 57.984375 411.6875 37.175781 379.277344 23.433594 341.980469 C -1.554688 274.167969 -0.132812 199.464844 1.011719 139.433594 L 1.03125 138.511719 C 1.261719 133.554688 1.410156 128.347656 1.492188 122.597656 C 1.910156 94.367188 24.355469 71.011719 52.589844 69.4375 C 111.457031 66.152344 156.996094 46.953125 195.90625 9.027344 L 196.246094 8.714844 C 202.707031 2.789062 210.847656 -0.117188 218.949219 0.00390625 C 226.761719 0.105469 234.542969 3.007812 240.773438 8.714844 L 241.105469 9.027344 C 280.023438 46.953125 325.5625 66.152344 384.429688 69.4375 C 412.664062 71.011719 435.109375 94.367188 435.527344 122.597656 C 435.609375 128.386719 435.757812 133.585938 435.988281 138.511719 L 436 138.902344 C 437.140625 199.046875 438.554688 273.898438 413.476562 341.910156 Z M 413.476562 341.910156 ', style=' stroke:none;fill-rule:nonzero;fill:rgb(0%,86.666667%,50.196078%);fill-opacity:1;')
+                      path(d='M 413.476562 341.910156 C 399.714844 379.207031 378.902344 411.636719 351.609375 438.289062 C 320.542969 468.625 279.863281 492.730469 230.699219 509.925781 C 229.085938 510.488281 227.402344 510.949219 225.710938 511.289062 C 223.476562 511.730469 221.203125 511.96875 218.949219 512 L 218.949219 0.00390625 C 226.761719 0.105469 234.542969 3.007812 240.773438 8.714844 L 241.105469 9.027344 C 280.023438 46.953125 325.5625 66.152344 384.429688 69.4375 C 412.664062 71.011719 435.109375 94.367188 435.527344 122.597656 C 435.609375 128.386719 435.757812 133.585938 435.988281 138.511719 L 436 138.902344 C 437.140625 199.046875 438.554688 273.898438 413.476562 341.910156 Z M 413.476562 341.910156 ', style=' stroke:none;fill-rule:nonzero;fill:rgb(0%,66.666667%,38.823529%);fill-opacity:1;')
+                      path(d='M 346.101562 256 C 346.101562 326.207031 289.097656 383.355469 218.949219 383.605469 L 218.5 383.605469 C 148.144531 383.605469 90.894531 326.359375 90.894531 256 C 90.894531 185.644531 148.144531 128.398438 218.5 128.398438 L 218.949219 128.398438 C 289.097656 128.648438 346.101562 185.796875 346.101562 256 Z M 346.101562 256 ', style=' stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;')
+                      path(d='M 346.101562 256 C 346.101562 326.207031 289.097656 383.355469 218.949219 383.605469 L 218.949219 128.398438 C 289.097656 128.648438 346.101562 185.796875 346.101562 256 Z M 346.101562 256 ', style=' stroke:none;fill-rule:nonzero;fill:rgb(88.235294%,92.156863%,94.117647%);fill-opacity:1;')
+                      path(d='M 276.417969 237.625 L 218.949219 295.101562 L 206.53125 307.519531 C 203.597656 310.453125 199.75 311.917969 195.90625 311.917969 C 192.058594 311.917969 188.214844 310.453125 185.277344 307.519531 L 158.578125 280.808594 C 152.710938 274.941406 152.710938 265.4375 158.578125 259.566406 C 164.4375 253.699219 173.953125 253.699219 179.820312 259.566406 L 195.90625 275.652344 L 255.175781 216.382812 C 261.042969 210.511719 270.558594 210.511719 276.417969 216.382812 C 282.285156 222.25 282.285156 231.765625 276.417969 237.625 Z M 276.417969 237.625 ', style=' stroke:none;fill-rule:nonzero;fill:rgb(70.588235%,82.352941%,84.313725%);fill-opacity:1;')
+                      path(d='M 276.417969 237.625 L 218.949219 295.101562 L 218.949219 252.605469 L 255.175781 216.382812 C 261.042969 210.511719 270.558594 210.511719 276.417969 216.382812 C 282.285156 222.25 282.285156 231.765625 276.417969 237.625 Z M 276.417969 237.625 ', style=' stroke:none;fill-rule:nonzero;fill:rgb(43.529412%,64.705882%,66.666667%);fill-opacity:1;')
+                .modal-header
+                  span.close ×
+                  h2(style="font-size: 0.8em;") SECURITY
+                .modal-body
+                    .row.card(style="background: #f9f9f9; width: 95%; display: block; margin-left: auto; margin-right: auto;    margin-bottom: 15px;")
+                        .col.s7
+                            p(style="color: #5a5858; padding-left: 20px;") Sufficient Fund
+                        .col.s4
+                            .check_mark
+                                .sa-icon.sa-success.animate
+                                    span.sa-line.sa-tip.animateSuccessTip
+                                    span.sa-line.sa-long.animateSuccessLong
+                                    .sa-placeholder
+                                    .sa-fix
+                    .row.card(style="background: #f9f9f9; width: 95%; display: block; margin-left: auto; margin-right: auto;    margin-bottom: 15px;")
+                        .col.s7
+                            p(style="color: #5a5858; padding-left: 20px;") Cheque Validity
+                        .col.s4
+                            .check_mark
+                                .sa-icon.sa-success.animate
+                                    span.sa-line.sa-tip.animateSuccessTip
+                                    span.sa-line.sa-long.animateSuccessLong
+                                    .sa-placeholder
+                                    .sa-fix
+                    .row.card(style="background: #f9f9f9; width: 95%; display: block; margin-left: auto; margin-right: auto;    margin-bottom: 15px;")
+                        .col.s7
+                            p(style="color: #5a5858; padding-left: 20px;") Bank code
+                        .col.s4
+                            .check_mark
+                                .sa-icon.sa-success.animate
+                                    span.sa-line.sa-tip.animateSuccessTip
+                                    span.sa-line.sa-long.animateSuccessLong
+                                    .sa-placeholder
+                                    .sa-fix
+                    .row.card(style="background: #f9f9f9; width: 95%; display: block; margin-left: auto; margin-right: auto;    margin-bottom: 15px;")
+                        .col.s7
+                            p(style="color: #5a5858; padding-left: 20px;") Signature
+                        .col.s4
+                            .check_mark
+                                .sa-icon.sa-success.animate
+                                    span.sa-line.sa-tip.animateSuccessTip
+                                    span.sa-line.sa-long.animateSuccessLong
+                                    .sa-placeholder
+                                    .sa-fix
+                    .row.card(style="background: #f9f9f9; width: 95%; display: block; margin-left: auto; margin-right: auto;margin-bottom: 45px;")
+                        .col.s7
+                            p(style="color: #5a5858; padding-left: 20px;") Bar code
+                        .col.s4
+                            .check_mark
+                                .sa-icon.sa-success.animate
+                                    span.sa-line.sa-tip.animateSuccessTip
+                                    span.sa-line.sa-long.animateSuccessLong
+                                    .sa-placeholder
+                                    .sa-fix
