@@ -630,6 +630,10 @@ hr {
     #nav-main li a.nav-link {
         padding-top: 18px;
     }
+
+    #companyLogo {
+        display: none;
+    }
 }
 
 .navbar-toggler {
@@ -675,6 +679,10 @@ hr {
 @media screen and (max-width: 768px) {
     .navbar-header {
         width: 100%;
+    }
+
+    #companyLogo {
+        display: none;
     }
 
     .navbar-brand {
@@ -1220,7 +1228,7 @@ textarea {
 
 #contact {
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #contact #contactForm {
@@ -1485,8 +1493,9 @@ textarea {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 60%;
-    padding-left: 9%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .heroAboutBusiness h5 {
@@ -1494,6 +1503,71 @@ textarea {
     font-weight: bold;
 }
 
+/************** About Business **********/
+.aboutBusiness {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 150px 0px 100px 0px;
+}
+
+.aboutBusiness h5 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #636363;
+}
+
+.aboutBusiness .aboutTokenRight {
+    margin-top: -50px;
+}
+
+.aboutBusiness .boxed {
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.24);
+}
+
+.aboutBusiness h6 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #535151;
+}
+
+.aboutBusiness .aboutTokenRight p {
+    color: black;
+}
+
+.aboutBusiness .aboutTokenLeft p {
+    color: black;
+}
+
+/***************** TEAM ********************/
+.team {
+    background: #F6F6FC;
+    padding: 100px 10% 250px 10%;
+}
+
+.team h5 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    padding-bottom: 26px;
+    color: #444444;
+}
+.team  p{
+    text-align: center;
+}
+.team .owl-item:nth-child(odd) {
+    margin-top: 195px;
+}
+@media only screen and (max-width: 560px) {
+    .team .owl-item:nth-child(odd) {
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-width: 879px) {
+    .team .owl-item:nth-child(odd) {
+        margin-top: 0px;
+    }
+}
 /*****************************************
              PROFILE PAGE
 *****************************************/
