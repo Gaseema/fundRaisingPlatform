@@ -99,40 +99,41 @@ html(lang='en')
                     h5(style="color: #3c3c3c; padding-left: 20px; border-bottom: solid #c9c9c9 1px; padding: 10px 0px 10px 15px;") Launch Your ICO
                 .row
                     .col-sm-12
-                        form#launch(name='contactForm', novalidate='true' style="width: 80%; margin: 20px 0px 20px 0px; margin-left: auto; margin-right: auto; text-align: center;")
+                        form(method="POST" name='launchICO', style="width: 80%; margin: 20px 0px 20px 0px; margin-left: auto; margin-right: auto; text-align: center;" action="")
                             .row
                                 .col-md-6
                                   .form-group
-                                    input#name.form-control(data-error='Please enter your name', name='name', placeholder='Business Name', required, type='text' style="border-radius: 3px;")
+                                    input.form-control(data-error='Please enter business name', name='businessName', placeholder='Business Name', type='text' style="border-radius: 3px;" required)
                                     .help-block.with-errors
                                 .col-md-6
                                   .form-group
-                                    input#email.form-control(data-error='Please enter your email', name='email', placeholder='Email', required, type='text' style="border-radius: 3px;")
+                                    input.form-control(data-error='Please enter your email', name='email', placeholder='Email', required, type='text' style="border-radius: 3px;")
                                     .help-block.with-errors
                                 .col-md-12
                                   .form-group
-                                    input#msg_subject.form-control(data-error='Please enter your subject', placeholder='Business Description', type='text' style="border-radius: 3px;" required)
+                                    input.form-control(data-error='Please enter business description', placeholder='Business Description', type='text' style="border-radius: 3px;", name="businessDescription" required)
                                     .help-block.with-errors
                                 .col-md-6
                                   .form-group
-                                    input#name.form-control(data-error='Please enter your name', name='name', placeholder='Amount of tokens to generate', required, type='text' style="border-radius: 3px;")
+                                    input.form-control(data-error='Please enter amount of tokens', name='tokensGenerate', placeholder='Amount of tokens to generate', required, type='text' style="border-radius: 3px;")
                                     .help-block.with-errors
                                 .col-md-6
                                   .form-group
-                                    input#email.form-control(data-error='Please enter your email', name='email', placeholder='Token price', required, type='text' style="border-radius: 3px;")
+                                    input.form-control(data-error='Please enter token price', name='tokenPrice', placeholder='Token price', required, type='text' style="border-radius: 3px;")
                                     .help-block.with-errors
                                 .col-md-6
                                   .form-group
-                                    input#startDatePicker.form-control(data-error='Select Date', placeholder='ICO start date', required, type='text' style="border-radius: 3px;" class="form-control")
+                                    input#startDatePicker.form-control(data-error='Select Date', placeholder='ICO start date', required, type='text' style="border-radius: 3px;" class="form-control" name="startDate")
                                     .help-block.with-errors
                                 .col-md-6
                                   .form-group
-                                    input#endDatePicker.form-control(data-error='Select Date', placeholder='ICO end date', required, type='text' style="border-radius: 3px;" class="form-control")
+                                    input#endDatePicker.form-control(data-error='Select Date', placeholder='ICO end date', required, type='text' style="border-radius: 3px;" class="form-control" name="endDate")
                                     .help-block.with-errors
                                 .col-md-12
                                   .form-group
-                                    textarea#message.form-control(data-error='Write your message', placeholder='Your Message', required='', rows='5')
+                                    input.form-control(data-error='Please enter token description', placeholder='Token Description', type='text' style="border-radius: 3px;", name="tokenDesctiption" required)
                                     .help-block.with-errors
+                                .col-md-12
                                   .submit-button
                                     button#form-submit.btn.btn-common.disabled(type='submit', style='pointer-events: all; cursor: pointer;') Submit
                                     #msgSubmit.h3.text-center.hidden

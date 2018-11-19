@@ -7,7 +7,6 @@ var mongoose = require('mongoose');
 var flash = require('connect-flash')
 var User = require("./models/user.js");
 
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -20,6 +19,12 @@ var session = require('express-session');
 // Configuring Passport
 var passport = require('passport');
 var expressSession = require('express-session');
+
+var async = require('async');
+
+// Require controller modules.
+var business_controller = require('./controllers/businessController');
+
 app.use(expressSession({
     secret: 'mySecretKey',
     resave: true,
@@ -33,6 +38,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(bodyParser.json());
 
 
 //Set up default mongoose connection
@@ -226,18 +232,30 @@ app.get('/icos/all', (req, res) => {
         title: 'Business Profile'
     });
 });
-app.get('/profile/ico/create', isLoggedIn, function(req, res) {
-    res.render('icoCreate', {
-        title: 'Launch ICO',
-        user: req.user
-    });
-});
-app.get('/profile/ico/update', isLoggedIn, function(req, res) {
-    res.render('icoUpdate', {
-        title: 'Launch ICO',
-        user: req.user
-    });
-});
+// app.get('/profile/ico/create', isLoggedIn, function(req, res) {
+//     res.render('icoCreate', {
+//         title: 'Launch ICO',
+//         user: req.user
+//     });
+// });
+// app.get('/profile/ico/update', isLoggedIn, function(req, res) {
+//     res.render('icoUpdate', {
+//         title: 'Launch ICO',
+//         user: req.user
+//     });
+// });
+
+// GET request for creating a product. NOTE This must come before routes that display product (uses id).
+app.get('/profile/ico/create', isLoggedIn, business_controller.business_create_get);
+
+// POST request for creating product.
+app.post('/profile/ico/create', isLoggedIn, business_controller.business_create_post);
+
+// GET request to update product.
+app.get('/product/:id/update', isLoggedIn, business_controller.business_update_get);
+
+// POST request to update product.
+app.post('/product/:id/update', isLoggedIn, business_controller.business_update_post);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
