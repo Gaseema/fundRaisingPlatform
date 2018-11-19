@@ -13,12 +13,62 @@ exports.business_create_get = function(req, res, next) {
     });
 };
 
+//Display Business profile
+exports.business_profile_page = function(req, res, next) {
+    async.parallel({
+        business: function(callback) {
+            Business.findById(req.params.id)
+                .exec(callback)
+        },
+    }, function(err, results) {
+        console.log(results)
+        if (err) {
+            return next(err);
+        } // Error in API usage.
+        if (results.business == null) { // No results.
+            var err = new Error('Business not found');
+            err.status = 404;
+            return next(err);
+        }
+        res.render('businessProfile', {
+            businessName: results.business.businessName,
+            businessDescription: results.business.businessDescription,
+            email: results.business.email,
+            tokens: results.business.tokens,
+            tokenPrice: results.business.tokenPrice,
+            startDate: results.business.startDate,
+            endDate: results.business.endDate,
+            tokenName: results.business.tokenName,
+        });
+    });
+}
+exports.business_profile_page_details = function(req, res, next) {
+    async.parallel({
+        business: function(callback) {
+            Business.findById(req.params.id)
+                .exec(callback)
+        },
+    }, function(err, results) {
+        console.log(results)
+        if (err) {
+            return next(err);
+        } // Error in API usage.
+        if (results.business == null) { // No results.
+            var err = new Error('Business not found');
+            err.status = 404;
+            return next(err);
+        }
+        res.json(results)
+    });
+}
+
 // Display Business create form on POST.
 exports.business_create_post = function(req, res, next) {
     var business = new Business({
         businessName: req.body.businessName,
         businessDescription: req.body.businessDescription,
         email: req.body.email,
+        tokenName: req.body.tokenName,
         tokens: req.body.tokensGenerate,
         tokenPrice: req.body.tokenPrice,
         startDate: req.body.startDate,
@@ -26,15 +76,13 @@ exports.business_create_post = function(req, res, next) {
         tokenDesctiption: req.body.tokenDesctiption,
         user: req.user.id,
     });
-    console.log("======================business")
-    console.log(req.user)
     // Data from form is valid. Save Business.
     business.save(function(err) {
         if (err) {
             return next(err);
         }
         //successful - redirect to new Business record.
-        res.redirect('/profile/ico/' + business.id);
+        res.redirect('/businessprofile/' + business.id);
     });
 };
 exports.business_update_get = function(req, res, next) {

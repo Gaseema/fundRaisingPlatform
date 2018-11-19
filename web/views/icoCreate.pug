@@ -113,6 +113,11 @@ html(lang='en')
                                   .form-group
                                     input.form-control(data-error='Please enter business description', placeholder='Business Description', type='text' style="border-radius: 3px;", name="businessDescription" required)
                                     .help-block.with-errors
+                                .col-md-12
+                                    .col-md-7(style="margin-left: auto; margin-right: auto;")
+                                      .form-group
+                                        input.form-control(data-error='Please enter token Name', placeholder='Token Name', type='text' style="border-radius: 3px;", name="tokenName" required)
+                                        .help-block.with-errors
                                 .col-md-6
                                   .form-group
                                     input.form-control(data-error='Please enter amount of tokens', name='tokensGenerate', placeholder='Amount of tokens to generate', required, type='text' style="border-radius: 3px;")

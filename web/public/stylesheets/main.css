@@ -1504,6 +1504,9 @@ textarea {
     font-weight: bold;
 }
 
+/************** Count Down Business **********/
+.endDateTime{font-size: 3em;font-weight: bold;color: #013A71;}
+
 /************** About Business **********/
 .aboutBusiness {
     width: 80%;

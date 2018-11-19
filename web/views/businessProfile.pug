@@ -2,6 +2,7 @@ extends layout
 block content
     script
         include ../public/javascript/countDown.js
+        include ../public/javascript/moment.js
     header#header-wrap
         // Navbar Start
         nav.navbar.navbar-expand-lg.fixed-top.scrolling-navbar.indigo
@@ -41,8 +42,8 @@ block content
     #hero-area.hero-area-bg(style='height: 70vh;')
         div.heroAboutBusiness.row
             .col-sm-12.col-md-6
-                h5 BizYangu
-                p(style="color: white;") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                h5 #{businessName}
+                p(style="color: white;") #{businessDescription}
                 a.btn.btn-white.btn-pill.mb-3.text-uppercase(href='javascript:;' style="border: solid white 1px; border-radius: 3px; margin-top: 20px;    margin-right: 25px; background: #0fd60f; color: white; border: none; font-weight: bold;") FOLLOW
                 a.btn.btn-white.btn-pill.mb-3.text-uppercase(href='javascript:;' style="border: solid white 1px; border-radius: 3px; background: white; color: black; margin-top: 20px;") BUY
             .col-sm-12.col-md-6
@@ -50,23 +51,42 @@ block content
                     .col-sm-6(style='padding: 0; line-height: 3;')
                         p(style="color: white;") Price:
                     .col-sm-6(style='padding: 0; line-height: 3;')
-                        p(style='float: right; padding-right: 3px; color: white;') 1 bizYangu Token = 400 kes
+                        p(style='float: right; padding-right: 3px; color: white;') 1 #{tokenName} Token = #{tokenPrice} kes
                 .row(style='border-bottom: solid white 1px;')
                     .col-sm-6(style='padding: 0; line-height: 3;')
                         p(style="color: white;") End Time:
                     .col-sm-6(style='padding: 0; line-height: 3;')
-                        p(style='float: right; padding-right: 3px; color: white;') 2017-12-26 15:00:00
+                        p(style='float: right; padding-right: 3px; color: white;') #{endDate}
                 .row(style='border-bottom: solid white 1px;')
                     .col-sm-6(style='padding: 0; line-height: 3;')
                         p(style="color: white;") Session Supply:
                     .col-sm-6(style='padding: 0; line-height: 3;')
-                        p(style='float: right; padding-right: 3px; color: white;') 3,500,000 bizYanguToken
+                        p(style='float: right; padding-right: 3px; color: white;') #{tokens}  #{tokenName} Tokens
     // ICO content
     section.icoSection
         h5(style="color:#4c4c4c; font-size: 3em; font-weight: bold;") ICO Pre Sale Going On
         p(style="color:#4c4c4c; padding-bottom: 45px;") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         div.icoProgress
-            h5 Second Phase of ICO sale ends in
+            h5 First Phase of ICO sale ends in
+            .container
+              .row
+                .col-sm
+                  span#days.endDateTime 20
+                  br
+                  | DAYS
+                .col-sm
+                  span#hours.endDateTime 15
+                  br
+                  | HOURS
+                .col-sm
+                  span#minutes.endDateTime 30
+                  br
+                  | MINUTES
+                .col-sm
+                  span#seconds.endDateTime 6
+                  br
+                  | SECONDS
+
             p.countDownICO 697 DAYS : 11 HOURS : 15 MINUTES : 57 SEC
             .progress(style="height: 30px; overflow: initial; border-radius: 20px;")
               .progress-bar(role='progressbar', style='width: 15%; background: #0466c5; position: relative; border-top-left-radius: 20px; border-bottom-left-radius: 20px;', aria-valuenow='15', aria-valuemin='0', aria-valuemax='100')

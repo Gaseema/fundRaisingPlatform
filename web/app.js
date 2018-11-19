@@ -204,13 +204,6 @@ app.post('/login', passport.authenticate('local-login', {
     failureFlash: true // allow flash messages
 }));
 
-// Business Profile signupMessage
-app.get('/businessprofile', (req, res) => {
-    res.render('businessProfile', {
-        title: 'Business Profile'
-    });
-});
-
 // ICO Listing Page
 app.get('/icos', (req, res) => {
     res.render('icoListing', {
@@ -232,18 +225,6 @@ app.get('/icos/all', (req, res) => {
         title: 'Business Profile'
     });
 });
-// app.get('/profile/ico/create', isLoggedIn, function(req, res) {
-//     res.render('icoCreate', {
-//         title: 'Launch ICO',
-//         user: req.user
-//     });
-// });
-// app.get('/profile/ico/update', isLoggedIn, function(req, res) {
-//     res.render('icoUpdate', {
-//         title: 'Launch ICO',
-//         user: req.user
-//     });
-// });
 
 // GET request for creating a product. NOTE This must come before routes that display product (uses id).
 app.get('/profile/ico/create', isLoggedIn, business_controller.business_create_get);
@@ -256,6 +237,11 @@ app.get('/product/:id/update', isLoggedIn, business_controller.business_update_g
 
 // POST request to update product.
 app.post('/product/:id/update', isLoggedIn, business_controller.business_update_post);
+
+// POST request to update product.
+app.get('/businessprofile/:id', business_controller.business_profile_page);
+// POST request to update product.
+app.get('/businessprofile/:id/details', business_controller.business_profile_page_details);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
