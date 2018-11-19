@@ -17,20 +17,37 @@ html(lang='en')
             a(href='#news') ICOs
     section.profileHero.row
     section.profileContainer.row
-        div(class="col-sm-12 col-md-4")
+        div(class="col-sm-12 col-md-3")
             .row(style='margin-top: -65px;')
-                div(class="col-sm-4")
-                    div(style='background: red; border-radius: 50%; width: 90px; height: 90px; border: solid white 2px;')
-                div(class="col-sm-8")
-                    p.verticalAlign(style="color: white; font-weight: bold; font-size: 1.2em;") Gaseema Ndung'u
-        div.profileNav(class="col-sm-12 col-md-8")
+                div(class="col-sm-12")
+                    div(style='background: red; border-radius: 50%; width: 140px; height: 140px; border: solid white 2px;')
+                    p(style="color: black; font-weight: bold; font-size: 1.5em;") Gaseema Ndung'u
+                    p
+                        b Invested Companies:
+                        | 3
+                    p
+                        b Total Invested:
+                        | 2000 kes
+        div.profileNav(class="col-sm-12 col-md-9")
             ul
-                li Profile
-                li(style='border-bottom: solid #0d0d81;') Your ICO
-            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-
-
+                li
+                    a(href="/profile") Profile
+                li
+                    a(href="/profile/ico" style='border-bottom: solid #0d0d81;') Your ICO
+            .row
+                .col-sm-6
+                    .row.trackTokens
+                        .col-sm-2(style="padding: 0px;")
+                            img.verticalAlign(src='/img/sampleICO.png', style='width: 100%;')
+                        .col-sm-10
+                            .row
+                                .col-sm-5
+                                    div.verticalAlign
+                                        p(style="font-weight: bold;") Company Name
+                                        p Investment: 200 kes
+                                        p Community: 20000
+                                .col-sm-7
+                                    img.verticalAlign(src='/img/graph.png', style='width: 100%;')
 
     // Footer Section Start
     footer#footer.footer-area.section-padding

@@ -8,6 +8,10 @@ html(lang='en')
       link(href='/stylesheets/main.css', rel='stylesheet', type='text/css')
       // Icon
       link(href='/fonts/line-icons.css', rel='stylesheet', type='text/css')
+      // Date Time Picker
+      link(href='/stylesheets/dateTimePicker.css', rel='stylesheet', type='text/css')
+      link(href='/stylesheets/bootstrap-datetimepicker-standalone.min.css', rel='stylesheet', type='text/css')
+      //link(href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.css', rel='stylesheet', type='text/css')
   body
     section.customeNav
         ul
@@ -92,34 +96,48 @@ html(lang='en')
         div.profileNav(class="col-sm-12 col-md-9")
             div(style="background: white; margin-top: 30px; padding-bottom: 20px;")
                 div
-                    h5(style="color: #3c3c3c; padding-left: 20px; border-bottom: solid #c9c9c9 1px; padding: 10px 0px 10px 15px;") Investments
+                    h5(style="color: #3c3c3c; padding-left: 20px; border-bottom: solid #c9c9c9 1px; padding: 10px 0px 10px 15px;") Launch Your ICO
                 .row
                     .col-sm-12
-                        .row.trackTokens
-                            .col-sm-2(style="padding: 0px;")
-                                img.verticalAlign(src='/img/sampleICO.png', style='width: 100%;')
-                            .col-sm-10
-                                .row
-                                    .col-sm-5
-                                        div.verticalAlign
-                                            p(style="font-weight: bold;") Company Name
-                                            p Investment: 200 kes
-                                            p Community: 20000
-                                    .col-sm-7
-                                        img.verticalAlign(src='/img/graph.png', style='width: 100%;')
-                    .col-sm-12
-                        .row.trackTokens
-                            .col-sm-2(style="padding: 0px;")
-                                img.verticalAlign(src='/img/sampleICO.png', style='width: 100%;')
-                            .col-sm-10
-                                .row
-                                    .col-sm-5
-                                        div.verticalAlign
-                                            p(style="font-weight: bold;") Company Name
-                                            p Investment: 200 kes
-                                            p Community: 20000
-                                    .col-sm-7
-                                        img.verticalAlign(src='/img/graph.png', style='width: 100%;')
+                        form#launch(name='contactForm', novalidate='true' style="width: 80%; margin: 20px 0px 20px 0px; margin-left: auto; margin-right: auto; text-align: center;")
+                            .row
+                                .col-md-6
+                                  .form-group
+                                    input#name.form-control(data-error='Please enter your name', name='name', placeholder='Business Name', required, type='text' style="border-radius: 3px;")
+                                    .help-block.with-errors
+                                .col-md-6
+                                  .form-group
+                                    input#email.form-control(data-error='Please enter your email', name='email', placeholder='Email', required, type='text' style="border-radius: 3px;")
+                                    .help-block.with-errors
+                                .col-md-12
+                                  .form-group
+                                    input#msg_subject.form-control(data-error='Please enter your subject', placeholder='Business Description', type='text' style="border-radius: 3px;" required)
+                                    .help-block.with-errors
+                                .col-md-6
+                                  .form-group
+                                    input#name.form-control(data-error='Please enter your name', name='name', placeholder='Amount of tokens to generate', required, type='text' style="border-radius: 3px;")
+                                    .help-block.with-errors
+                                .col-md-6
+                                  .form-group
+                                    input#email.form-control(data-error='Please enter your email', name='email', placeholder='Token price', required, type='text' style="border-radius: 3px;")
+                                    .help-block.with-errors
+                                .col-md-6
+                                  .form-group
+                                    input#startDatePicker.form-control(data-error='Select Date', placeholder='ICO start date', required, type='text' style="border-radius: 3px;" class="form-control")
+                                    .help-block.with-errors
+                                .col-md-6
+                                  .form-group
+                                    input#endDatePicker.form-control(data-error='Select Date', placeholder='ICO end date', required, type='text' style="border-radius: 3px;" class="form-control")
+                                    .help-block.with-errors
+                                .col-md-12
+                                  .form-group
+                                    textarea#message.form-control(data-error='Write your message', placeholder='Your Message', required='', rows='5')
+                                    .help-block.with-errors
+                                  .submit-button
+                                    button#form-submit.btn.btn-common.disabled(type='submit', style='pointer-events: all; cursor: pointer;') Submit
+                                    #msgSubmit.h3.text-center.hidden
+                                    .clearfix
+
 
     // Footer Section Start
     footer#footer.footer-area.section-padding
@@ -170,5 +188,10 @@ html(lang='en')
     a.back-to-top(href='#')
       i.lni-arrow-up
     script(src='/javascript/jquery-min.js')
+    script(src='/javascript/moment.js')
     script(src='/javascript/bootstrap.min.js')
+    script(src='/javascript/dateTimePicker.js')
     script(src='/javascript/main.js')
+    script.
+        $('#startDatePicker').datetimepicker();
+        $('#endDatePicker').datetimepicker();

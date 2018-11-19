@@ -55,6 +55,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
     font-size: 14px;
+    color: #353535;
 }
 
 ul, ol {
@@ -1552,22 +1553,27 @@ textarea {
     padding-bottom: 26px;
     color: #444444;
 }
-.team  p{
+
+.team p {
     text-align: center;
 }
+
 .team .owl-item:nth-child(odd) {
     margin-top: 195px;
 }
+
 @media only screen and (max-width: 560px) {
     .team .owl-item:nth-child(odd) {
         margin-top: 0px;
     }
 }
+
 @media only screen and (max-width: 879px) {
     .team .owl-item:nth-child(odd) {
         margin-top: 0px;
     }
 }
+
 /*****************************************
              PROFILE PAGE
 *****************************************/
@@ -1578,17 +1584,21 @@ textarea {
     position: relative;
     background: -webkit-linear-gradient(230deg, #f8f8f8 0%, #939393 100%);
     background: linear-gradient(187deg, #00000000 0%, #6200ff00 100%), url(/img/x0.jpg);
-    height: 35vh;
+    height: 20vh;
     width: 100vw;
     background-size: cover;
 }
 
 .profileContainer {
-    width: 80%;
-    margin: 0px auto 80px auto;
+    padding: 0px 10%;
+    margin: 0px;
+    background: #f8f8f8;
+    /* height: -webkit-fill-available; */
 }
 
-.profileNav {}
+.profileNav {
+    height: fit-content;
+}
 
 .profileNav ul {
     border-bottom: solid #e4e4e4 2px;
@@ -1598,8 +1608,12 @@ textarea {
 
 .profileNav li {
     display: inline-block;
-    padding: 20px 15px 10px 0px;
-    /* text-align: center; */
+    padding: 20px 10px 10px 10px;
+    margin-right: 10px;
+}
+
+.profileNav li a {
+    color: black;
 }
 
 .trackTokens {
@@ -1607,6 +1621,16 @@ textarea {
     box-shadow: 0 4px 25px #eaf2f8;
     margin-bottom: 15px;
     padding: 10px;
+    background: white;
+    margin: 1px;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.75);
+    margin: 7px 15px;
+}
+
+.profileSettings a {
+    color: #1d1c1c !important;
 }
 
 /*****************************************

@@ -82,6 +82,7 @@ app.get('/signup', function(req, res) {
     });
 });
 app.get('/profile', isLoggedIn, function(req, res) {
+    console.log(req.user.local)
     res.render('profile', {
         user: req.user
     });
@@ -223,6 +224,18 @@ app.get('/icos/past', (req, res) => {
 app.get('/icos/all', (req, res) => {
     res.render('icoListing-all', {
         title: 'Business Profile'
+    });
+});
+app.get('/profile/ico/create', isLoggedIn, function(req, res) {
+    res.render('icoCreate', {
+        title: 'Launch ICO',
+        user: req.user
+    });
+});
+app.get('/profile/ico/update', isLoggedIn, function(req, res) {
+    res.render('icoUpdate', {
+        title: 'Launch ICO',
+        user: req.user
     });
 });
 

@@ -13,11 +13,14 @@ block content
                 // LOGIN FORM
                 form(action='/signup', method='post')
                   .form-group
+                    label Full Name
+                    input.form-control(type='text', name='name' required)
+                  .form-group
                     label Email
-                    input.form-control(type='text', name='email')
+                    input.form-control(type='text', name='email' required)
                   .form-group
                     label Password
-                    input.form-control(type='password', name='password')
+                    input.form-control(type='password', name='password' required)
                   button.btn.btn-warning.btn-lg(type='submit') Signup
                 div(style='padding-top: 20px;')
                     p(style='float: left; line-height: 40px;') Or signup with :

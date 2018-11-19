@@ -27,6 +27,3 @@ function countDownTimer() {
         }
     }, 1000);
 }
-$( document ).ready(function() {
-    alert('ready')
-});

@@ -136,9 +136,9 @@
 }(jQuery));
 var owl = $('.owl-carousel');
 owl.owlCarousel({
-    loop:true,
-    margin:10,
-    responsiveClass:true,
+    loop: true,
+    margin: 10,
+    responsiveClass: true,
     responsive: {
         // breakpoint from 0 up
         0: {
