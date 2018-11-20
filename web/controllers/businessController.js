@@ -6,7 +6,8 @@ var async = require('async');
 
 // Display Business create form on GET.
 exports.business_create_get = function(req, res, next) {
-    console.log(req.user)
+    console.log("req.user.id")
+    console.log(req.user.id)
     res.render('icoCreate', {
         title: 'Launch ICO',
         user: req.user
@@ -21,7 +22,6 @@ exports.business_profile_page = function(req, res, next) {
                 .exec(callback)
         },
     }, function(err, results) {
-        console.log(results)
         if (err) {
             return next(err);
         } // Error in API usage.
@@ -39,6 +39,8 @@ exports.business_profile_page = function(req, res, next) {
             startDate: results.business.startDate,
             endDate: results.business.endDate,
             tokenName: results.business.tokenName,
+            tokenDescription: results.business.tokenDescription,
+            user: req.user.id,
         });
     });
 }
@@ -73,7 +75,7 @@ exports.business_create_post = function(req, res, next) {
         tokenPrice: req.body.tokenPrice,
         startDate: req.body.startDate,
         endDate: req.body.endDate,
-        tokenDesctiption: req.body.tokenDesctiption,
+        tokenDescription: req.body.tokenDescription,
         user: req.user.id,
     });
     // Data from form is valid. Save Business.

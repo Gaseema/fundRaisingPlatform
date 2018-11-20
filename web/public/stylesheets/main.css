@@ -33,6 +33,9 @@ a {
     -o-transition: all 0.2s linear;
     transition: all 0.2s linear;
 }
+.canvasjs-chart-credit{
+    display: none;
+}
 
 .verticalAlign {
     position: relative;
@@ -1312,6 +1315,9 @@ textarea {
 .footer-area {
     background: #34363a;
 }
+.footer-area p{
+    color: white !important;
+}
 
 .footer-area .footer-titel {
     font-size: 20px;
@@ -1463,9 +1469,13 @@ textarea {
 *****************************************/
 .icoList {
     background: white;
-    margin: 7px 0px;
+    margin: 10px 0px;
     border-radius: 3px;
     color: #646464;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    padding: 20px 0px;
 }
 
 .icosListSettings {
@@ -1652,6 +1662,7 @@ textarea {
     font-size: 1.2em;
     padding: 20px 0px;
     padding-bottom: 0;
+    padding-bottom: 40px;
 }
 
 .icoProgress {

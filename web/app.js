@@ -24,6 +24,7 @@ var async = require('async');
 
 // Require controller modules.
 var business_controller = require('./controllers/businessController');
+var ico_controller = require('./controllers/icoListController');
 
 app.use(expressSession({
     secret: 'mySecretKey',
@@ -204,28 +205,6 @@ app.post('/login', passport.authenticate('local-login', {
     failureFlash: true // allow flash messages
 }));
 
-// ICO Listing Page
-app.get('/icos', (req, res) => {
-    res.render('icoListing', {
-        title: 'Business Profile'
-    });
-});
-app.get('/icos/upcoming', (req, res) => {
-    res.render('icoListing-upcoming', {
-        title: 'Business Profile'
-    });
-});
-app.get('/icos/past', (req, res) => {
-    res.render('icoListing-past', {
-        title: 'Business Profile'
-    });
-});
-app.get('/icos/all', (req, res) => {
-    res.render('icoListing-all', {
-        title: 'Business Profile'
-    });
-});
-
 // GET request for creating a product. NOTE This must come before routes that display product (uses id).
 app.get('/profile/ico/create', isLoggedIn, business_controller.business_create_get);
 
@@ -242,6 +221,12 @@ app.post('/product/:id/update', isLoggedIn, business_controller.business_update_
 app.get('/businessprofile/:id', business_controller.business_profile_page);
 // POST request to update product.
 app.get('/businessprofile/:id/details', business_controller.business_profile_page_details);
+
+//ICO List PAGE
+app.get('/icos/ongoing', ico_controller.ongoing_ico_list_page);
+app.get('/icos/upcoming', ico_controller.upcoming_ico_list_page);
+app.get('/icos/past', ico_controller.past_ico_list_page);
+app.get('/icos/all', ico_controller.all_ico_list_page);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

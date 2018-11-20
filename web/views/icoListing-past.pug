@@ -29,11 +29,12 @@ html(lang='en')
             .col-sm(style='background: white; padding: 20px; border-radius: 3px;margin-left: 6px;')
                 button.btn.btn-secondary(type='button' style='background: #004486; margin-bottom: 10px;') LIST YOUR ICO
                 p ICO listings are fact based. We do not promote or advertise investment deals unless explicitly mentioned.
-        a(href='/icos')
-            button.btn.btn-secondary(type='button' style='background: white; color: #12c312;') Ongoing
+        a(href='/icos/ongoing')
+            button.btn.btn-secondary(type='button' style='background: white; color: #313131;') Ongoing
         a(href='/icos/upcoming')
             button.btn.btn-secondary(type='button' style='background: white; color: #313131;') Upcoming
-        button.btn.btn-secondary(type='button' style='background: #12c312; color: white;') Past
+        a(href='/icos/past')
+            button.btn.btn-secondary(type='button' style='background: #12c312; color: white;') Past
         a(href='/icos/all')
             button.btn.btn-secondary(type='button' style='background: white; color: #313131;') All
         .row.icoSearchBar
@@ -45,133 +46,43 @@ html(lang='en')
                     path(style='fill-rule:evenodd;clip-rule:evenodd;', d='M244.186,214.604l-54.379-54.378c-0.289-0.289-0.628-0.491-0.93-0.76   c10.7-16.231,16.945-35.66,16.945-56.554C205.822,46.075,159.747,0,102.911,0S0,46.075,0,102.911   c0,56.835,46.074,102.911,102.91,102.911c20.895,0,40.323-6.245,56.554-16.945c0.269,0.301,0.47,0.64,0.759,0.929l54.38,54.38   c8.169,8.168,21.413,8.168,29.583,0C252.354,236.017,252.354,222.773,244.186,214.604z M102.911,170.146   c-37.134,0-67.236-30.102-67.236-67.235c0-37.134,30.103-67.236,67.236-67.236c37.132,0,67.235,30.103,67.235,67.236   C170.146,140.044,140.043,170.146,102.911,170.146z', fill='#FFFFFF')
 
     section(style="background:#fafafa;padding:60px 0px;")
-        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
-          .col-sm-4
-              .row(style="height: 100%;")
-                .col-sm-3
-                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
-                .col-sm-9
-                  p.verticalAlign.borderRight(style='color: #646464; font-weight: bold;') Company X
-                  button.btn(style='position: absolute; right: 20px; background: #06ac06; padding: 4px; border-radius: 3px; font-size: 0.8em; top: 25px;') follow
-          .col-sm-6
-              .row(style="height: 100%;")
-                .col-sm
-                  div.verticalAlign One of three columns
-                .col-sm
-                  div.verticalAlign.borderRight One of three columns
-          .col-sm-2
-            div.verticalAlign(style="height: 100%;")
-                p(style='font-size: 0.8em;') Status: Ongoing
-                p(style='font-size: 0.8em;') Growth: 40%
-                p(style='font-size: 0.8em;') Community: 20,000
-        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
-          .col-sm-4
-              .row(style="height: 100%;")
-                .col-sm-3
-                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
-                .col-sm-9
-                  p.verticalAlign.borderRight Company X
-          .col-sm-6
-              .row(style="height: 100%;")
-                .col-sm
-                  div.verticalAlign One of three columns
-                .col-sm
-                  div.verticalAlign.borderRight One of three columns
-          .col-sm-2
-            div.verticalAlign(style="height: 100%;")
-                p Status
-                p Growth
-                p Community
-        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
-          .col-sm-4
-              .row(style="height: 100%;")
-                .col-sm-3
-                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
-                .col-sm-9
-                  p.verticalAlign.borderRight Company X
-          .col-sm-6
-              .row(style="height: 100%;")
-                .col-sm
-                  div.verticalAlign One of three columns
-                .col-sm
-                  div.verticalAlign.borderRight One of three columns
-          .col-sm-2
-            div.verticalAlign(style="height: 100%;")
-                p Status
-                p Growth
-                p Community
-        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
-          .col-sm-4
-              .row(style="height: 100%;")
-                .col-sm-3
-                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
-                .col-sm-9
-                  p.verticalAlign.borderRight Company X
-          .col-sm-6
-              .row(style="height: 100%;")
-                .col-sm
-                  div.verticalAlign One of three columns
-                .col-sm
-                  div.verticalAlign.borderRight One of three columns
-          .col-sm-2
-            div.verticalAlign(style="height: 100%;")
-                p Status
-                p Growth
-                p Community
-        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
-          .col-sm-4
-              .row(style="height: 100%;")
-                .col-sm-3
-                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
-                .col-sm-9
-                  p.verticalAlign.borderRight Company X
-          .col-sm-6
-              .row(style="height: 100%;")
-                .col-sm
-                  div.verticalAlign One of three columns
-                .col-sm
-                  div.verticalAlign.borderRight One of three columns
-          .col-sm-2
-            div.verticalAlign(style="height: 100%;")
-                p Status
-                p Growth
-                p Community
-        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
-          .col-sm-4
-              .row(style="height: 100%;")
-                .col-sm-3
-                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
-                .col-sm-9
-                  p.verticalAlign.borderRight Company X
-          .col-sm-6
-              .row(style="height: 100%;")
-                .col-sm
-                  div.verticalAlign One of three columns
-                .col-sm
-                  div.verticalAlign.borderRight One of three columns
-          .col-sm-2
-            div.verticalAlign(style="height: 100%;")
-                p Status
-                p Growth
-                p Community
-        div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
-          .col-sm-4
-              .row(style="height: 100%;")
-                .col-sm-3
-                  img.verticalAlign(src='/img/sampleICO.png' style='width: 100%;')
-                .col-sm-9
-                  p.verticalAlign.borderRight Company X
-          .col-sm-6
-              .row(style="height: 100%;")
-                .col-sm
-                  div.verticalAlign One of three columns
-                .col-sm
-                  div.verticalAlign.borderRight One of three columns
-          .col-sm-2
-            div.verticalAlign(style="height: 100%;")
-                p Status
-                p Growth
-                p Community
+        for ico in icos
+            div.row.icoList(style="width: 80%; margin-left: auto; margin-right: auto;")
+              .col-sm-4
+                  .row(style="height: 100%;")
+                    .col-sm-4
+                      div.verticalAlign(style="text-align: center;")
+                          img(src='/img/sampleICO.png' style='width: 100%;')
+                          p #{ico.businessName}
+                    .col-sm-8
+                      div.verticalAlign#chartContainer(style="height: 90px; max-width: 100%; margin: 0px auto;")
+              .col-sm-6
+                  .row(style="height: 100%;")
+                    .col-sm
+                      div.verticalAlign
+                        p(style='font-size: 0.8em; width: 90%;') #{ico.startDate}
+                            span(style="float: right;")
+                                | #{ico.endDate}
+                        .progress(style="width: 90%; border-radius: 50px;")
+                            .progress-bar.bg-success(role='progressbar', style='width: 25%; border-radius: 50px;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                        p(style="line-height: 2; font-size: 0.8em; text-align: center; color: #737272;") 25% complete
+
+                    .col-sm
+                      div.verticalAlign.borderRight
+                        p(style='font-size: 0.8em; line-height: 2;') #{ico.tokens}
+                        div(style="width: 90%; position: relative;")
+                            .progress(style="border-radius: 50px;")
+                                .progress-bar.bg-success(role='progressbar', style='width: 25%; border-radius: 50px;', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                        p(style="line-height: 2; font-size: 0.8em; text-align: center; color: #737272;") 35% cup complete
+                        p(style=' position: absolute; left: 60%; top: 7px; font-size: 0.8em; color: green; line-height: 1; padding-left: 5px;')
+                          span(style=' position: absolute; border-right: solid #00a232 1px; margin-top: 0px; line-height: 28; font-size: 0.1em; left: 0px;') .
+                          | cap
+
+              .col-sm-2
+                div.verticalAlign
+                    p(style='font-size: 0.8em;') Status: Ongoing
+                    p(style='font-size: 0.8em;') Growth: 40%
+                    p(style='font-size: 0.8em;') Community: 20,000
     // Footer Section Start
     footer#footer.footer-area.section-padding
       .container
@@ -223,3 +134,5 @@ html(lang='en')
     script(src='/javascript/jquery-min.js')
     script(src='/javascript/bootstrap.min.js')
     script(src='/javascript/main.js')
+    script(src='/javascript/canvasjs.min.js')
+    script(src='/javascript/charts.js')
