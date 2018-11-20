@@ -12,9 +12,17 @@ html(lang='en')
     section.customeNav
         ul
           li
-            a(href='#home' style="font-size: 2em; font-weight: bold; color: rgb(0, 57, 112);") FundRaise
+            a(href='/' style="font-size: 2em; font-weight: bold; color: rgb(0, 57, 112);") FundRaise
           li
-            a(href='#news') ICOs
+            a(href='/') Home
+          li
+            a(href='/#features') Features
+          li
+            a(href='/#walletApp') Wallet
+          li
+            a.active(href='#news') ICOs
+          li
+            a(href='/#contact') CONTACT
     section.profileHero.row
     section.profileContainer.row
         div(class="col-sm-12 col-md-3")
@@ -95,31 +103,14 @@ html(lang='en')
                     h5(style="color: #3c3c3c; padding-left: 20px; border-bottom: solid #c9c9c9 1px; padding: 10px 0px 10px 15px;") Investments
                 .row
                     .col-sm-12
-                        .row.trackTokens
-                            .col-sm-2(style="padding: 0px;")
-                                img.verticalAlign(src='/img/sampleICO.png', style='width: 100%;')
-                            .col-sm-10
-                                .row
-                                    .col-sm-5
-                                        div.verticalAlign
-                                            p(style="font-weight: bold;") Company Name
-                                            p Investment: 200 kes
-                                            p Community: 20000
-                                    .col-sm-7
-                                        img.verticalAlign(src='/img/graph.png', style='width: 100%;')
-                    .col-sm-12
-                        .row.trackTokens
-                            .col-sm-2(style="padding: 0px;")
-                                img.verticalAlign(src='/img/sampleICO.png', style='width: 100%;')
-                            .col-sm-10
-                                .row
-                                    .col-sm-5
-                                        div.verticalAlign
-                                            p(style="font-weight: bold;") Company Name
-                                            p Investment: 200 kes
-                                            p Community: 20000
-                                    .col-sm-7
-                                        img.verticalAlign(src='/img/graph.png', style='width: 100%;')
+                        div(style=' width: 60%; margin-left: auto; margin-right: auto; text-align: center; padding: 50px 0px;')
+                            svg#Layer_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 473.935 473.935', style='enable-background:new 0 0 473.935 473.935;width: 100px; margin-bottom: 20px;', xml:space='preserve')
+                              circle(style='fill:#FFC10E;', cx='236.967', cy='236.967', r='236.967')
+                              path(style='fill:#333333;', d='M356.671,354.1c-66.226-67.618-174.255-67.337-240.096,0.703 c-8.389,8.666,4.827,21.912,13.227,13.227c58.87-60.83,154.386-61.204,213.641-0.703C351.896,375.96,365.116,362.721,356.671,354.1 L356.671,354.1z')
+                              circle(style='fill:#333333;', cx='164.938', cy='155.232', r='37.216')
+                              circle(style='fill:#333333;', cx='305.667', cy='155.232', r='37.216')
+                            p(style="font-size: 1.5em;") Ooops! Seems like you have not invested in any company
+                            a.btn(href="/icos/ongoing" style="background: green; color: white; text-transform: uppercase; margin: 20px 0px;") Invest
 
     // Footer Section Start
     footer#footer.footer-area.section-padding

@@ -16,18 +16,20 @@ html(lang='en')
           li
             a(href='/') Home
           li
-            a(href='/') Features
+            a(href='/#features') Features
           li
-            a(href='/') Wallet
+            a(href='/#walletApp') Wallet
           li
             a.active(href='#news') ICOs
+          li
+            a(href='/#contact') CONTACT
     section.icosListSettings
         .row(style='width: 80%; margin: 20px auto 50px auto;')
             .col-sm(style='background: white; padding: 20px; border-radius: 3px;margin-right: 5px;')
                 button.btn.btn-secondary(type='button' style='background: #004486; margin-bottom: 10px;') SUBSCRIBE
                 p Do not miss investment opportunities. Be alerted via email a day before listed security token offerings are opened for investing.
             .col-sm(style='background: white; padding: 20px; border-radius: 3px;margin-left: 6px;')
-                button.btn.btn-secondary(type='button' style='background: #004486; margin-bottom: 10px;') LIST YOUR ICO
+                a.btn.btn-secondary(href="/profile/ico/create" type='button' style='background: #004486; margin-bottom: 10px;') LIST YOUR ICO
                 p ICO listings are fact based. We do not promote or advertise investment deals unless explicitly mentioned.
         a(href='/icos/ongoing')
             button.btn.btn-secondary(type='button' style='background: white; color: #313131;') Ongoing
