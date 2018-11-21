@@ -40,7 +40,7 @@ exports.business_profile_page = function(req, res, next) {
             endDate: results.business.endDate,
             tokenName: results.business.tokenName,
             tokenDescription: results.business.tokenDescription,
-            user: req.user.id,
+            user: "99",
         });
     });
 }

@@ -12,6 +12,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+app.listen(8000, function() {
+    console.log('Application worker ' + process.pid + ' started...');
+});
+
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var session = require('express-session');
