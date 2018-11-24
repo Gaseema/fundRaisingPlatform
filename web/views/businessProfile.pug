@@ -19,15 +19,15 @@ block content
               #main-navbar.collapse.navbar-collapse
                 ul.navbar-nav.mr-auto.w-100.justify-content-left.clearfix
                     li.nav-item.active
-                      a.nav-link(href='#hero-area') Home
+                      a.nav-link(href='/#hero-area') Home
                     li.nav-item
-                      a.nav-link(href='#features') Features
+                      a.nav-link(href='/#features') Features
                     li.nav-item
-                      a.nav-link(href='#walletApp') Wallet
+                      a.nav-link(href='/#walletApp') Wallet
                     li.nav-item
-                      a.nav-link(href='/icos') ICOs
+                      a.nav-link(href='/icos/ongoing') ICOs
                     li.nav-item
-                      a.nav-link(href='#contact') Contact
+                      a.nav-link(href='/#contact') Contact
                 .btn-sing.float-right
                   a.btn.btn-border(href='/login') login / signup
         // Mobile Menu Start
@@ -44,8 +44,12 @@ block content
             .col-sm-12.col-md-6
                 h5 #{businessName}
                 p(style="color: white;") #{businessDescription}
+                .row
+                    .col-sm-12
+                        button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModalCenter' style="background: white; color: black; border-radius: 3px; margin: 30px 0px;") Download WhitePaper
                 a.btn.btn-white.btn-pill.mb-3.text-uppercase(href='javascript:;' style="border: solid white 1px; border-radius: 3px; margin-top: 20px;    margin-right: 25px; background: #0fd60f; color: white; border: none; font-weight: bold;") FOLLOW
-                a.btn.btn-white.btn-pill.mb-3.text-uppercase(href='javascript:;' style="border: solid white 1px; border-radius: 3px; background: white; color: black; margin-top: 20px;") BUY
+                button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModalCenter' style="background: white; color: black; border-radius: 3px;")
+                  | BUY
             .col-sm-12.col-md-6
                 .row(style='border-bottom: solid white 1px;')
                     .col-sm-6(style='padding: 0; line-height: 3;')
@@ -114,6 +118,8 @@ block content
                         polygon(fill='#7954FF', points='73.6,100.7 73.6,125.9 42.5,82.1    ')
                 li
                     img(src='/img/mpesa-logo.png', style='height: 50px;margin: 25px;')
+                li
+                    img(src='/img/aeternity.png', style='height: 65px; margin: 17px;')
 
 
 
@@ -126,11 +132,11 @@ block content
                 .col-sm-6.aboutTokenLeft
                     div.boxed(style="height: 200px; width: 100%; margin-bottom: 20px;")
                         div.verticalAlign(style='text-align: center;')
-                            h6 24.5M
+                            h6 7.5M
                             p Market Cap
                     div.boxed(style="height: 200px; width: 100%;")
                         div.verticalAlign(style='text-align: center;')
-                            h6 10 kes
+                            h6 2 kes
                             p Token Price
                 .col-sm-6.aboutTokenRight
                     div.boxed(style="height: 200px; width: 100%; margin-bottom: 20px;")
@@ -139,7 +145,7 @@ block content
                             p Total Supply
                     div.boxed(style="height: 200px; width: 100%;")
                         div.verticalAlign(style='text-align: center;')
-                            h6 24.5M
+                            h6 10M
                             p Available Supply
         .col-sm-12.col-md-7
             h5 #{tokenName} Token
@@ -154,30 +160,31 @@ block content
               .owl-stage-outer
                 .owl-stage(style="padding: 20px 0px 100px 10px;")
                     .owl-item(style='width:200px; height: auto; box-shadow: 0px 0px 5px 0px rgba(195, 195, 195, 0.75);')
-                        img(src="/img/sampleICO.png" style="width: 100%; height: 200px; object-fit: cover;")
+                        img(src="/img/team/team3.jpg" style="width: 100%; height: 200px; object-fit: cover;")
                         div(style="background: white; color: #585858;padding: 10px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;")
-                            p(style="font-size: 1.3em; font-weight: bold;") Gaseema Ndung'u
+                            p(style="font-size: 1.3em; font-weight: bold;") Denzel Mshangamwe
+                            p Chief Operating Oficer
+                    .owl-item(style='width:200px; height: auto; box-shadow: 0px 0px 5px 0px rgba(195, 195, 195, 0.75);')
+                        img(src="/img/team/team2.png" style="width: 100%; height: 200px;object-fit: cover;")
+                        div(style="background: white; color: #585858;padding: 10px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;")
+                            p(style="font-size: 1.3em; font-weight: bold;") Alice Nyambura
                             p Vice Chairman
                     .owl-item(style='width:200px; height: auto; box-shadow: 0px 0px 5px 0px rgba(195, 195, 195, 0.75);')
-                        img(src="/img/art4.png" style="width: 100%; height: 200px;object-fit: cover;")
+                        img(src="/img/team/team6.jpg" style="width: 100%; height: 200px; object-fit: cover;")
                         div(style="background: white; color: #585858;padding: 10px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;")
-                            p(style="font-size: 1.3em; font-weight: bold;") Gaseema Ndung'u
-                            p Vice Chairman
+                            p(style="font-size: 1.3em; font-weight: bold;") Maureen
+                            p Chief Operation Oficer
                     .owl-item(style='width:200px; height: auto; box-shadow: 0px 0px 5px 0px rgba(195, 195, 195, 0.75);')
-                        img(src="/img/art4.png" style="width: 100%; height: 200px; object-fit: cover;")
+                        img(src="/img/team/team5.jpg" style="width: 100%; height: 200px; object-fit: cover;")
                         div(style="background: white; color: #585858;padding: 10px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;")
-                            p(style="font-size: 1.3em; font-weight: bold;") Gaseema Ndung'u
-                            p Vice Chairman
+                            p(style="font-size: 1.3em; font-weight: bold;") Maxwell Shikuku
+                            p Software Developer
                     .owl-item(style='width:200px; height: auto; box-shadow: 0px 0px 5px 0px rgba(195, 195, 195, 0.75);')
-                        img(src="/img/sampleICO.png" style="width: 100%; height: 200px; object-fit: cover;")
+                        img(src="/img/team/team4.jpeg" style="width: 100%; height: 200px;object-fit: cover;")
                         div(style="background: white; color: #585858;padding: 10px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;")
-                            p(style="font-size: 1.3em; font-weight: bold;") Gaseema Ndung'u
-                            p Vice Chairman
-                    .owl-item(style='width:200px; height: auto; box-shadow: 0px 0px 5px 0px rgba(195, 195, 195, 0.75);')
-                        img(src="/img/art4.png" style="width: 100%; height: 200px;object-fit: cover;")
-                        div(style="background: white; color: #585858;padding: 10px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;")
-                            p(style="font-size: 1.3em; font-weight: bold;") Gaseema Ndung'u
-                            p Vice Chairman
+                            p(style="font-size: 1.3em; font-weight: bold;") Churchil Odhiambo
+                            p Graphic Designer
+
             //div.btn.customNextBtn.verticalAlign(style='background: transparent; right: 0px; padding: 3px; border: solid black 1px;')
                 svg#Capa_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 46.02 46.02', style='enable-background:new 0 0 46.02 46.02; width: 35px; border-radius: 20px; padding: 6px;', xml:space='preserve')
                   path(d='M14.757,46.02c-1.412,0-2.825-0.521-3.929-1.569c-2.282-2.17-2.373-5.78-0.204-8.063l12.758-13.418L10.637,9.645    C8.46,7.37,8.54,3.76,10.816,1.582c2.277-2.178,5.886-2.097,8.063,0.179l16.505,17.253c2.104,2.2,2.108,5.665,0.013,7.872    L18.893,44.247C17.77,45.424,16.267,46.02,14.757,46.02z')
@@ -188,6 +195,16 @@ block content
         .col-sm-12
             h5 Advisory Board
             p Following is our advisory board list
+            .row(style="text-align: center; text-align: center; width: 50%; margin: 71px auto 0px auto;")
+                .col-sm-4
+                    img(src="/img/team/advisor1.jpg" style="width: 110px; border-radius: 50%; height: 110px; object-fit: cover;")
+                    p Martin
+                .col-sm-4
+                    img(src="/img/team/advisor2.png" style="width: 110px; border-radius: 50%; height: 110px; object-fit: cover;")
+                    p Denzel
+                .col-sm-4
+                    img(src="/img/team/advisor3.png" style="width: 110px; border-radius: 50%; height: 110px; object-fit: cover;")
+                    p James
     // Contact Section Start
     section#contact.section-padding(style="background: -webkit-linear-gradient(230deg, #f8f8f8 0%, #939393 100%); background: linear-gradient(187deg, #00000000 0%, #6200ff00 100%), url(/img/x0.jpg); background-size: cover;")
       .container(style="background: white; box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 50px 0px; margin-top: -10%; padding-top: 50px;")
@@ -282,3 +299,80 @@ block content
     #preloader
       #loader-1.loader
     // End Preloader
+    // Button trigger modal
+    button.btn.btn-primary(type='button', data-toggle='modal', data-target='#exampleModalCenter')
+      | Launch demo modal
+    // Modal
+    #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
+      .modal-dialog.modal-dialog-centered(role='document')
+        .modal-content
+          .modal-header
+            h5#exampleModalCenterTitle.modal-title Purchase BRT Tokens
+            button.close(type='button', data-dismiss='modal', aria-label='Close')
+              span(aria-hidden='true') ×
+          .modal-body(style="text-align: center;")
+              ul#pills-tab.nav.nav-pills.mb-3(role='tablist' style="text-align: center; width: fit-content; margin-left: auto; margin-right: auto;")
+                li.nav-item
+                  a#pills-home-tab.nav-link.active(data-toggle='pill', href='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') Step 1
+                li.nav-item
+                  a#pills-profile-tab.nav-link(data-toggle='pill', href='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') Step 2
+                li.nav-item
+                  a#pills-contact-tab.nav-link(data-toggle='pill', href='#pills-contact', role='tab', aria-controls='pills-contact', aria-selected='false') Step 3
+              #pills-tabContent.tab-content
+                #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
+                    div
+                         h5 Choose Payment Method
+                            ul(style="margin: 40px 0px;")
+                                  li(onclick="$('#pills-profile-tab').tab('show')" style="background: white; width: 100px; display: inline-block; margin-right: 15px; -webkit-box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); -moz-box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); border-radius: 3px;")
+                                    svg#Layer_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 150 150', enable-background='new 0 0 150 150', xml:space='preserve', style='width: 40px; height: 40px; margin: 15px;')
+                                      circle(opacity='0.1', fill='#F89F36', cx='75', cy='75', r='75')
+                                      path(fill='#F89F36', d='M107.1,92.5c0.5-3.9-0.5-7.4-3.2-10.3c-1.3-1.3-2.8-2.4-4.3-3.6c0.2-0.1,0.4-0.2,0.6-0.2  c9.5-1.9,12.4-14.9,7.6-21c-1.9-2.5-4.3-4.4-7-5.9c-1.9-1.1-3.9-2-5.9-2.9c1.1-3.7,2.6-8.8,3.8-12.9l-7.8-2.2c-1.2,4-2.6,9-3.8,12.6  c-2.2-0.6-4.2-1.2-6.2-1.8c1-3.7,2.5-8.6,3.7-12.7l-7.7-2.2c-1.2,4.1-2.7,9.2-3.8,12.8c-5.3-1.6-10.4-3-15.7-4.6  c-0.8,2.9-1.6,5.5-2.4,8.3c1.1,0.3,2.1,0.6,3,0.9c1,0.3,2,0.6,2.9,0.9c2.7,1,3.6,2.9,2.9,5.6c-3.3,11-6.6,22.2-9.8,33.2  c-0.7,2.5-2,3.1-4.4,2.4c-1.7-0.5-3.5-1-5.2-1.5c-1.4,3-2.8,5.8-4.2,8.8c5.2,1.6,10.4,3.1,15.7,4.7c-1.1,4-2.6,9-3.8,13.2l7.8,2.2  c1.3-4.2,2.7-9.1,3.8-13c2.2,0.7,4.1,1.3,6.2,2c-1.1,4-2.6,8.8-3.7,12.9l7.8,2.2c1.3-4.2,2.7-9.1,3.8-12.9c0.3,0,0.5,0.1,0.7,0.1  c3.9,0.5,7.8,1.2,11.6,1.4c5.1,0.2,9.5-1.5,12.9-5.6C105.1,100.2,106.5,96.6,107.1,92.5z M78.3,53.6c4.8,1.4,9.7,2.3,13.5,5.6  c2.6,2.1,3.3,4.9,2.3,7.7c-1.1,3-3.4,4.7-6.8,4.8c-4.6,0.2-9.1-1.2-13.6-2.7C75.2,63.9,76.7,58.9,78.3,53.6z M84.2,97.2  c-4.9,0.7-9.4-0.6-14-1.8c-1.3-0.4-2.5-0.8-3.9-1.2c1.7-5.8,3.4-11.4,5.1-17.1c5.9,1.7,11.9,2.9,16.7,6.9c2.5,2.1,3.5,4.7,2.6,8  C89.7,95.1,87.4,96.7,84.2,97.2z')
+                                  li(onclick="$('#pills-profile-tab').tab('show')" style="background: white; width: 100px; display: inline-block; margin-right: 15px; -webkit-box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); -moz-box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); border-radius: 3px;")
+                                    svg#Layer_1(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', version='1.1', x='0px', y='0px', viewBox='0 0 150 150', enable-background='new 0 0 150 150', xml:space='preserve', style='width: 40px; height: 40px; margin: 15px;')
+                                      circle(opacity='0.1', fill='#7954FF', cx='75', cy='75', r='75')
+                                      polygon(fill='#7954FF', points='76.4,100.7 76.4,125.9 107.5,82.1    ')
+                                      polygon(fill='#7954FF', points='106.3,74 76.4,24.1 76.4,60.4    ')
+                                      polygon(fill='#7954FF', points='76.4,63.2 76.4,94.2 106.1,76.7    ')
+                                      polygon(fill='#7954FF', points='43.8,74 73.7,24.1 73.7,60.4    ')
+                                      polygon(fill='#7954FF', points='73.7,63.2 73.7,94.2 43.9,76.7    ')
+                                      polygon(fill='#7954FF', points='73.6,100.7 73.6,125.9 42.5,82.1    ')
+                                  li(onclick="$('#pills-profile-tab').tab('show')" style="background: white; width: 100px; display: inline-block; margin-right: 15px; -webkit-box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); -moz-box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); border-radius: 3px;")
+                                    img(src='/img/mpesa-logo.png', style='width: 40px; height: 40px; margin: 15px;')
+                                  li(onclick="$('#pills-profile-tab').tab('show')" style="background: white; width: 100px; display: inline-block; margin-right: 15px; -webkit-box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); -moz-box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); box-shadow: 2px 1px 46px -12px rgba(0, 0, 0, 0.75); border-radius: 3px;")
+                                    img(src='/img/aeternity.png', style='width: 90px; margin: 10px 0px;')
+
+                #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab')
+                    form(action='/login', method='post', style='text-align: left;width: 60%;margin-left: auto;margin-right: auto;')
+                        .form-group
+                            label Amount
+                            input.form-control(type='text', name='text', required='' id='tokensToPurchase')
+                        .form-group
+                            label Phone Number
+                            input.form-control(type='text', name='text', required='')
+                        div.btn.btn-warning.btn-lg(style="background: #007BFF; padding: 7px 18px; font-size: 1em; display: block; margin-left: auto; margin-right: auto;" onclick="$('#pills-contact-tab').tab('show'); timerOut()") Buy
+                            span(id="purchaseTokenAmount")
+                            | Tokens
+
+
+                #pills-contact.tab-pane.fade(role='tabpanel', aria-labelledby='pills-contact-tab')
+                    div#processPaymentDone(style="display: none;")
+                        svg.checkmark(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 52 52')
+                            circle.checkmark__circle(cx='26', cy='26', r='25', fill='none')
+                            path.checkmark__check(fill='none', d='M14.1 27.2l7.1 7.2 16.7-16.8')
+                    div#processingPayment(style="transform: scale(0.5);")
+                        .containerLoader
+                          .dot.dot-1
+                          .dot.dot-2
+                          .dot.dot-3
+                        svg(xmlns='http://www.w3.org/2000/svg', version='1.1')
+                          defs
+                            filter#goo
+                              fegaussianblur(in='SourceGraphic', stdDeviation='10', result='blur')
+                              fecolormatrix(in='blur', mode='matrix', values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7')
+                    p#gloabalPurchasedTokensP(style="display: none; font-size: 1.4em; color: green; padding-bottom: 20px;") Purchased
+                        span#gloabalPurchasedTokens
+                        | successfully
+
+
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close

@@ -170,4 +170,18 @@ $('.customPrevBtn').click(function() {
     // With optional speed parameter
     // Parameters has to be in square bracket '[]'
     owl.trigger('prev.owl.carousel', [300]);
+});
+
+$('#tokensToPurchase').on('keyup', function(e) {
+    gloabalPurchasedTokens = $(this).val() / 2
+    $('#purchaseTokenAmount').html(" " + $(this).val() / 2 + " ")
 })
+
+function timerOut() {
+    setTimeout(function(e) {
+        $('#processingPayment').css('display', 'none');
+        $('#processPaymentDone').css('display', 'block');
+        $('#gloabalPurchasedTokensP').css('display', 'block');
+        $('#gloabalPurchasedTokens').html(" " + gloabalPurchasedTokens + " tokens ")
+    }, 20000)
+}

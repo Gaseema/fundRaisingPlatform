@@ -93,7 +93,6 @@ app.get('/signup', function(req, res) {
     });
 });
 app.get('/profile', isLoggedIn, function(req, res) {
-    console.log(req.user.local)
     res.render('profile', {
         user: req.user
     });
@@ -247,5 +246,25 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error');
 });
+
+// Access to MPESA
+var request = require('request'),
+  consumer_key = "Ezr4QUDKPG4jaqpoqjA5gcJZWjavQKFa",
+  consumer_secret = "BQAqVKbWtcqYBMVR",
+  url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"
+  auth = "Basic " + new Buffer(consumer_key + ":" + consumer_secret).toString("base64");
+
+  request(
+    {
+      url : url,
+      headers : {
+        "Authorization" : auth
+      }
+    },
+    function (error, response, body) {
+      // TODO: Use the body object to extract OAuth access token
+      console.log("================================================")
+    }
+  )
 
 module.exports = app;

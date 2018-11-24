@@ -11,7 +11,6 @@ exports.ongoing_ico_list_page = function(req, res, next) {
             if (err) {
                 return next(err);
             }
-            //Successful, so render
             res.render('icoListing-ongoing', {
                 title: 'Business Profile',
                 icos: list_icos
